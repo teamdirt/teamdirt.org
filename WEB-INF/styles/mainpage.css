@@ -1,0 +1,51 @@
+img.platinum {
+	width:100px;
+    height:100px;
+}
+img.gold {
+	width:75px;
+    height:75px;
+}
+img.silver {
+	width:50px;
+    height:50px;
+}
+img.bronze {
+	width:25px;
+    height:25px;
+}
+
+div.event {
+	margin: 15px;
+	padding: 5px;
+}
+img.event {
+    width:100%;
+    max-height:100px;
+}
+h5.event {
+    font-weight: bold;
+    margin: 0px;
+}
+h6.event {
+    font-style: italic;
+    margin: 0px;
+}
+p.event {
+    text-indent: 10px;
+    margin: 0px;
+}
+
+
+/*
+div[id="eventsContainer"] {
+    border: solid;
+}
+div[id="sponsorContainer"] {
+    border: solid;
+}
+
+div.event {
+    border: solid;
+}
+*/
