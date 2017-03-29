@@ -17,30 +17,152 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/styles/teamdirt.css"></link>
+    
 </head>
 <body>
     <header id="commonHeader">
-      <nav>
-          <a href="#"><img src="imgs/slide-011.png" alt="homeLink" style="width:50px;height:50px;"></a>
-          <a href="#">OpenProjects</a> |
-          <a href="#">Community</a> |
-          <a href="#">Membership</a> |
-          <a href="#">Trails</a> |
-          <a href="#">Resources</a> |
-          <a href="#">About Us</a>
+      <nav class="w3-bar w3-light-grey">
+          <a href="#" class="w3-bar-item w3-button"><img src="imgs/slide-011.png" alt="homeLink" style="width:50px;height:50px;"></a>
+          <div class="w3-dropdown-hover">
+            <button class="w3-button">OpenProjects</button>
+              <div class="w3-dropdown-content w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">MacDunn - No Secret</a>
+                <a href="#" class="w3-bar-item w3-button">Alsea Falls - Dutchman Tie</a>
+                <a href="#" class="w3-bar-item w3-button">Alsea Falls - Misery Whip</a>
+              </div>
+          </div>
+          <div class="w3-dropdown-hover">
+            <button class="w3-button">Community</button>
+              <div class="w3-dropdown-content w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Land Managers</a>
+                <a href="#" class="w3-bar-item w3-button">Trail Build Training</a>
+                <a href="#" class="w3-bar-item w3-button">Create/Join Ride Events</a>
+                <a href="#" class="w3-bar-item w3-button">Facebook Feed</a>
+              </div>
+          </div>
+          <div class="w3-dropdown-hover">
+            <button class="w3-button">Membership</button>
+              <div class="w3-dropdown-content w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">New to the Area?</a>
+                <a href="#" class="w3-bar-item w3-button">Join TeamDirt</a>
+                <a href="#" class="w3-bar-item w3-button">Board Meetings</a>
+                <a href="#" class="w3-bar-item w3-button">Bylaws</a>
+                <a href="#" class="w3-bar-item w3-button">Trail Building Reports</a>
+              </div>
+          </div>
+          <div class="w3-dropdown-hover">
+            <button class="w3-button">Trails</button>
+              <div class="w3-dropdown-content w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Alsea Falls Area</a>
+                <a href="#" class="w3-bar-item w3-button">MacDunn Area</a>
+                <a href="#" class="w3-bar-item w3-button">Mary's Peak Area</a>
+                <a href="#" class="w3-bar-item w3-button">Bald Hill Area</a>
+                <a href="#" class="w3-bar-item w3-button">Blodgett Area</a>
+                <a href="#" class="w3-bar-item w3-button">Other Local Areas</a>
+              </div>
+          </div>
+          <a href="#" class="w3-bar-item w3-button">Resources</a>
+          <a href="#" class="w3-bar-item w3-button">About Us</a>
       </nav>
     </header>
     
-    <main id="main">
+    <div class="w3-display-container w3-animate-opacity">
+        <img src="imgs/placeholder.png" alt="heroImage" style="width:100%;min-height:200px;max-height:400px;">
+        <div class="w3-container w3-display-bottomright">
+            <button id="scrollHeroLeft" class="w3-button"><i class="fa fa-arrow-circle-o-left w3-xxlarge" aria-hidden="true"></i></button>
+            <button id="scrollHeroRight" class="w3-button"><i class="fa fa-arrow-circle-o-right w3-xxlarge" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    
+    <main id="mainContainer" class="w3-panel">
+        <header id="mainHeader">
+            <h1>Mission Statement</h1>
+            <p>The Declaration of Independence is the statement adopted by the Second Continental Congress meeting at the Pennsylvania State House (Independence Hall) in Philadelphia on July 4, 1776, which announced that the thirteen American colonies,[2] then at war with the Kingdom of Great Britain, regarded themselves as thirteen newly independent sovereign states, and no longer under British rule. Instead they formed a new nation—the United States of America. John Adams was a leader in pushing for independence, which was passed on July 2 with no opposing vote cast. A committee of five had already drafted the formal declaration, to be ready when Congress voted on independence. The term "Declaration of Independence" is not used in the document itself.
+
+John Adams persuaded the committee to select Thomas Jefferson to compose the original draft of the document,[3] which Congress would edit to produce the final version. The Declaration was ultimately a formal explanation of why Congress had voted on July 2 to declare independence from Great Britain, more than a year after the outbreak of the American Revolutionary War. The next day, John Adams wrote to his wife Abigail: "The Second Day of July 1776, will be the most memorable Epocha, in the History of America."[4] But Independence Day is actually celebrated on July 4, the date that the Declaration of Independence was approved.</p>
+        </header>
         
+        <section id="mainSection" class="w3-row">
+            <div id="eventsContainer" class="w3-container w3-col s8">
+                <h4 class="subsection">Upcoming Events</h4>
+                <div class="w3-row">
+                    <div class="w3-col s6 event">
+                        <div class="w3-panel w3-row">
+                            <div class="w3-col s4">
+                                <img class="event" src="imgs/placeholder.png" alt="eventImg">
+                            </div>
+                            <div class="w3-col s8">
+                                <h5 class="event">No-Secret Exit</h5>
+                                <h6 class="event">Date/Time:</h6>
+                                <p class="event">03.03.2017 @ 9am</p>
+                                <h6 class="event">Location:</h6>
+                                <p class="event">Oak Creek Gate, MacDunn</p>
+                                <a href="https://www.facebook.com/events/1227206854024848/" class="event" target="_blank"><button class="w3-button w3-border w3-blue w3-hover-green w3-round-large">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" aria-hidden="true"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col s6 event">
+                        <div class="w3-panel w3-row">
+                            <div class="w3-col s4">
+                                <img class="event" src="imgs/placeholder.png" alt="eventImg">
+                            </div>
+                            <div class="w3-col s8">
+                                <h5 class="event">No-Secret Exit</h5>
+                                <h6 class="event">Date/Time:</h6>
+                                <p class="event">03.03.2017 @ 9am</p>
+                                <h6 class="event">Location:</h6>
+                                <p class="event">Oak Creek Gate, MacDunn</p>
+                                <a href="https://www.facebook.com/events/1227206854024848/" class="event" target="_blank"><button class="w3-button w3-border w3-blue w3-hover-green w3-round-large">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" aria-hidden="true"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      
+                      
+ 
+            </div>
+            <div id="sponsorContainer" class="w3-container w3-col s4">
+                <h4 class="subsection">Sponsors</h4>
+                <h5>Platinum</h5>
+                <div class="w3-container w3-row-padding">
+                    <a href="#" class="w3-col s6"><img src="imgs/placeholder.png" alt="sponsor" class="platinum"></a>
+                    <a href="#" class="w3-col s6"><img src="imgs/placeholder.png" alt="sponsor" class="platinum"></a>
+                </div>
+                <h5>Gold</h5>
+                <div class="w3-container w3-row-padding">
+                    <a href="#" class="w3-col s4"><img src="imgs/placeholder.png" alt="sponsor" class="gold"></a>
+                    <a href="#" class="w3-col s4"><img src="imgs/placeholder.png" alt="sponsor" class="gold"></a>
+                    <a href="#" class="w3-col s4"><img src="imgs/placeholder.png" alt="sponsor" class="gold"></a>
+                </div>
+                <h5>Silver</h5>
+                <div class="w3-container w3-row-padding">
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="silver"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="silver"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="silver"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="silver"></a>
+                </div>
+                <div class="w3-container w3-row-padding">
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="silver"></a>
+                </div>
+                <h5>Bronze</h5>
+                <div class="w3-container w3-row-padding">
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="bronze"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="bronze"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="bronze"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="bronze"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="bronze"></a>
+                    <a href="#" class="w3-col s2"><img src="imgs/placeholder.png" alt="sponsor" class="bronze"></a>
+                </div>
+            </div>
+            
+        </section>
         
-        
-        
+        <footer></footer>
     </main>
     
-    <footer id="commonFooter">
-        <hr/>
-        <p>copyright teamDirt 2017, all rights reserved.</p>
+    <footer id="commonFooter" class="w3-center w3-opacity">
+        <hr>
+        <p>copyright <i class="fa fa-copyright" aria-hidden="true"></i> teamDirt 2017, all rights reserved.</p>
         <p>Soure Available on <a href="https://github.com/teamdirt" target="_blank">GitHub</a> <i class="fa fa-github w3-large" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Site Master: <a href="http://gregorygutshall.com" target="_blank">Gregory Gutshall</a></p>
     </footer>
 </body>
