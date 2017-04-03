@@ -11,7 +11,8 @@
     <title>Team Dirt</title>
     <link rel="icon" href="favicon.png">
 
-    <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/mainpage.js"></script>
     <!--script src="https://use.fontawesome.com/4486bdea13.js"></script-->
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -22,49 +23,51 @@
 </head>
 <body>
     <header id="commonHeader">
-      <nav class="w3-bar w3-light-grey">
+      <nav id="commonNavBar" class="w3-bar">
           <a href="#" class="w3-bar-item w3-button"><img src="imgs/slide-011.png" alt="homeLink" style="width:50px;height:50px;"></a>
-          <div class="w3-dropdown-hover">
-            <button class="w3-button">OpenProjects</button>
-              <div class="w3-dropdown-content w3-bar-block">
-                <a href="/openprojects/nosecret.html" class="w3-bar-item w3-button">McDonald Forest - No Secret</a>
-                <a href="#" class="w3-bar-item w3-button">Alsea Falls - Dutchman Tie</a>
-                <a href="#" class="w3-bar-item w3-button">Alsea Falls - Misery Whip</a>
-				<a href="#" class="w3-bar-item w3-button">Corvallis - PumpTrack</a>
+          <div>
+              <div class="w3-dropdown-hover w3-padding-8">
+                <button class="w3-button">OpenProjects</button>
+                  <div class="w3-dropdown-content w3-bar-block">
+                    <a href="/openprojects/nosecret.html" class="w3-bar-item w3-button">McDonald Forest - No Secret</a>
+                    <a href="#" class="w3-bar-item w3-button">Alsea Falls - Dutchman Tie</a>
+                    <a href="#" class="w3-bar-item w3-button">Alsea Falls - Misery Whip</a>
+                    <a href="#" class="w3-bar-item w3-button">Corvallis - PumpTrack</a>
+                  </div>
               </div>
-          </div>
-          <div class="w3-dropdown-hover">
-            <button class="w3-button">Community</button>
-              <div class="w3-dropdown-content w3-bar-block">
-                <a href="/community/landmanagers.html" class="w3-bar-item w3-button">Land Managers</a>
-                <a href="/community/trailbuilding.html" class="w3-bar-item w3-button">Trail Build Training</a>
-                <a href="#" class="w3-bar-item w3-button">Create/Join Ride Events</a>
-                <a href="#" class="w3-bar-item w3-button">Facebook Feed</a>
+              <div class="w3-dropdown-hover">
+                <button class="w3-button">Community</button>
+                  <div class="w3-dropdown-content w3-bar-block">
+                    <a href="/community/landmanagers.html" class="w3-bar-item w3-button">Land Managers</a>
+                    <a href="/community/trailbuilding.html" class="w3-bar-item w3-button">Trail Build Training</a>
+                    <a href="#" class="w3-bar-item w3-button">Create/Join Ride Events</a>
+                    <a href="#" class="w3-bar-item w3-button">Facebook Feed</a>
+                  </div>
               </div>
-          </div>
-          <div class="w3-dropdown-hover">
-            <button class="w3-button">Membership</button>
-              <div class="w3-dropdown-content w3-bar-block">
-                <a href="#" class="w3-bar-item w3-button">New to the Area?</a>
-                <a href="#" class="w3-bar-item w3-button">Join TeamDirt</a>
-                <a href="#" class="w3-bar-item w3-button">Board Meetings</a>
-                <a href="#" class="w3-bar-item w3-button">Bylaws</a>
-                <a href="#" class="w3-bar-item w3-button">Trail Building Reports</a>
+              <div class="w3-dropdown-hover">
+                <button class="w3-button">Membership</button>
+                  <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">New to the Area?</a>
+                    <a href="#" class="w3-bar-item w3-button">Join TeamDirt</a>
+                    <a href="#" class="w3-bar-item w3-button">Board Meetings</a>
+                    <a href="#" class="w3-bar-item w3-button">Bylaws</a>
+                    <a href="#" class="w3-bar-item w3-button">Trail Building Reports</a>
+                  </div>
               </div>
-          </div>
-          <div class="w3-dropdown-hover">
-            <button class="w3-button">Trails</button>
-              <div class="w3-dropdown-content w3-bar-block">
-                <a href="#" class="w3-bar-item w3-button">Alsea Falls Area</a>
-                <a href="#" class="w3-bar-item w3-button">MacDunn Area</a>
-                <a href="#" class="w3-bar-item w3-button">Mary's Peak Area</a>
-                <a href="#" class="w3-bar-item w3-button">Bald Hill Area</a>
-                <a href="#" class="w3-bar-item w3-button">Blodgett Area</a>
-                <a href="#" class="w3-bar-item w3-button">Other Local Areas</a>
+              <div class="w3-dropdown-hover">
+                <button class="w3-button">Trails</button>
+                  <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">Alsea Falls Area</a>
+                    <a href="#" class="w3-bar-item w3-button">MacDunn Area</a>
+                    <a href="#" class="w3-bar-item w3-button">Mary's Peak Area</a>
+                    <a href="#" class="w3-bar-item w3-button">Bald Hill Area</a>
+                    <a href="#" class="w3-bar-item w3-button">Blodgett Area</a>
+                    <a href="#" class="w3-bar-item w3-button">Other Local Areas</a>
+                  </div>
               </div>
+              <a href="#" class="w3-bar-item w3-button">Resources</a>
+              <a href="#" class="w3-bar-item w3-button">About Us</a>
           </div>
-          <a href="#" class="w3-bar-item w3-button">Resources</a>
-          <a href="#" class="w3-bar-item w3-button">About Us</a>
       </nav>
     </header>
     
@@ -75,6 +78,19 @@
             <button id="scrollHeroRight" class="w3-button"><i class="fa fa-arrow-circle-o-right w3-xxlarge" aria-hidden="true"></i></button>
         </div>
     </div>
+    
+    <!--div class="w3-content w3-display-container">
+      <img class="mySlides" src="/imgs/partners/imba.png" style="width:100%;max-height=400px;">
+      <img class="mySlides" src="imgs/partners/cof_h_spot1.png" style="width:100%;max-height=400px;">
+      <img class="mySlides" src="imgs/partners/Starker-Forests.jpeg" style="width:100%;max-height=400px;">
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+    </div-->
     
     <main id="mainContainer" class="w3-panel">
         <header id="mainHeader">
@@ -163,5 +179,34 @@ John Adams persuaded the committee to select Thomas Jefferson to compose the ori
         <p>copyright <i class="fa fa-copyright" aria-hidden="true"></i> teamDirt 2017, all rights reserved.</p>
         <p>Soure Available on <a href="https://github.com/teamdirt" target="_blank">GitHub</a> <i class="fa fa-github w3-large" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Site Master: <a href="http://gregorygutshall.com" target="_blank">Gregory Gutshall</a></p>
     </footer>
+    
+    <!--script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" w3-white", "");
+          }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " w3-white";
+        }
+    </script-->
 </body>
 </html>
