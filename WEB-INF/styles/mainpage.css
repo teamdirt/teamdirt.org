@@ -18,6 +18,7 @@ img.bronze {
 div.event {
 	margin: 15px;
 	padding: 5px;
+	min-width: 200px;
 }
 img.event {
     width:100%;

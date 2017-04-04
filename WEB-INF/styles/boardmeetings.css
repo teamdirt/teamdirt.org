@@ -6,3 +6,11 @@ img.traillead {
 img.meeting {
 	max-width: 100%;
 }
+
+div.traillead {
+	min-width: 100px;
+}
+
+div.meeting {
+	min-width: 100px;
+}
