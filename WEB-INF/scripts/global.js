@@ -38,6 +38,13 @@ function HeroBanner() {
       
 }
 
+function TrailAreaWarning() {
+    this.isWarning = false;
+    
+}
 
 // Add the Hero Banner Controller
 tdApp.controller('HeroBanner', HeroBanner);
+
+// Add the warning Controller
+tdApp.controller('TrailAreaWarning', TrailAreaWarning);
