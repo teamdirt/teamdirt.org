@@ -26,23 +26,23 @@
     <main id="mainContainer" ng-controller="RideArea as ridearea" class="w3-panel">
 		
 		<header id="mainHeader">
-			<h1>Alsea Falls Area</h1>
+			<h1>Mary's Peak Area</h1>
 		</header>
 
 		<section class="w3-panel">
-			<div class="TrailforksRegionInfo" data-w="1000px" data-h="130px" data-rid="3941" data-counts="1" data-stats="1"></div>
-			<div class="TrailforksWidgetMap" data-w="1000px" data-h="400px" data-rid="3941" data-maptype="trailforks" data-trailstyle="difficulty" data-controls="1" data-list="0" data-dml="1" data-layers="labels" data-z="" data-lat="" data-lon=""></div>
+			<div class="TrailforksRegionInfo" data-w="1000px" data-h="130px" data-rid="8449" data-counts="1" data-stats="1"></div>
+			<div class="TrailforksWidgetMap" data-w="1000px" data-h="400px" data-rid="8449" data-maptype="trailforks" data-trailstyle="difficulty" data-controls="1" data-list="0" data-dml="1" data-layers="labels" data-z="" data-lat="" data-lon=""></div>
 			<a href="https://www.trailforks.com/"><img src="/imgs/partners/trailforks_logo_pb.png" class="tfLogo"/></a>
 		</section>
 
-		<section id="warning" ng-show="true" class="w3-panel w3-border w3-border-red w3-card-2">
+		<section id="warning" ng-show="false" class="w3-panel w3-border w3-border-red w3-card-2">
 			<h5 class="subsection"><i class="fa fa-exclamation-triangle w3-xxxlarge" aria-hidden="true" style="color:red;vertical-align:middle;"></i> Trail Area Warning</h5>
 			<div class="w3-row w3-padding-8">
 				<div class="w3-col s2">
 					<img src="/imgs/raw_imgs/signs/alseafallsWarning1.jpg" alt="warningIMG" class="warning" onclick="onClick(this)">
 				</div>
 				<div class="w3-col s10">
-					<p>Due to heavy equipment and logging operations, the main paved road (Fall Creek Access Rd), Whistlepunk Tie Rd (BLM 14-7-27), Whistlepunk and Sexy Tree trails will be closed 24hr/day from M-Th and Friday from midnight until 5pm.  All roads and trails will be open Friday after 5pm through midnight Sunday.  You can use the following alternate route to climb to the top of HighBaller.</p>
+					<p>{{ridearea.warningtext}}</p>
 				</div>
 			</div>
 
@@ -55,7 +55,7 @@
 
 		<section class="w3-panel">
 			<h4 class="subsection">Trails</h4>
-			<div class="TrailforksTrailStatus" data-w="1000px" data-h="300px" data-rid="3941" data-displaytype="table" data-unsanctioned="0" data-photos="0"></div>
+			<div class="TrailforksTrailStatus" data-w="1000px" data-h="300px" data-rid="8449" data-displaytype="table" data-unsanctioned="0" data-photos="0"></div>
 		</section>
 
 		<section class="w3-panel">
