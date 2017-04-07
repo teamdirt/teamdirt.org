@@ -16,21 +16,22 @@
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/teamdirt.css"></link>
-	<link rel="stylesheet" type="text/css" href="/styles/mainpage.css"></link>
+    <link rel="stylesheet" type="text/css" href="/styles/teamdirt.css">
+	<link rel="stylesheet" type="text/css" href="/styles/mainpage.css">
     
 </head>
 <body ng-app="tdApp">
     <header id="commonHeader" ng-include="'includes/navBar.htm'"></header>
     
-    <div ng-controller="HeroBanner as hero" class="w3-display-container">
-        <img ng-src="{{hero.getCurrentImg()}}" alt="heroImage" style="width:100%;min-height:200px;max-height:400px;">
+    <div ng-controller="HeroBanner as hero" class="w3-display-container heroBanner" ng-style="hero.getBackgroundImg()">
+        <!--img ng-src="{{hero.getCurrentImg()}}" alt="heroImage" style="width:100%;min-height:200px;max-height:400px;"-->
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-            <button ng-click="hero.shift(-1)" class="w3-button w3-black w3-round-large w3-left">&#10094;</button>
-            <button ng-click="hero.shift(1)" class="w3-button w3-black w3-round-large w3-right">&#10095;</button>
-            <div class="w3-center">
+            <span class="w3-center">
+				<h2 style="color:white">{{hero.getCurrentImgName()}}</h2>
                 <span ng-repeat="img in hero.images" ng-click="hero.set($index)" class="w3-badge w3-small w3-border w3-transparent {{hero.getColorCode($index)}}" style="cursor:pointer">&nbsp;</span>
-            </div>
+            </span>
+			<button ng-click="hero.shift(-1)" class="w3-button w3-black w3-round-large w3-left">&#10094;</button>
+            <button ng-click="hero.shift(1)" class="w3-button w3-black w3-round-large w3-right">&#10095;</button>
         </div>
     </div>
          
