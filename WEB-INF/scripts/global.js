@@ -7,7 +7,7 @@ function HeroBanner() {
     this.images = [
         {name:"X", src:"/imgs/placeholder.png"},
         {name:"X", src:"/imgs/heroBanner/building_1.jpg"},
-        {name:"X", src:"/imgs/heroBanner/eqp_2.jpg"},
+        {name:"X", src:"/imgs/heroBanner/eqp_2.JPG"},
         {name:"X", src:"/imgs/heroBanner/events_1.jpg"}
     ];
     

@@ -35,14 +35,23 @@
 			<a href="https://www.trailforks.com/"><img src="/imgs/partners/trailforks_logo_pb.png" class="tfLogo"/></a>
 		</section>
 
-		<section id="warning" ng-show="false" class="w3-panel w3-border w3-border-red w3-card-2">
+		<section id="warning" ng-show="true" class="w3-panel w3-border w3-border-red w3-card-2">
 			<h5 class="subsection"><i class="fa fa-exclamation-triangle w3-xxxlarge" aria-hidden="true" style="color:red;vertical-align:middle;"></i> Trail Area Warning</h5>
+			<p>Click <a href="http://cf.forestry.oregonstate.edu/current-activities" target="_blank">here</a> for the latest OSU updates.</p>
 			<div class="w3-row w3-padding-8">
 				<div class="w3-col s2">
-					<img src="/imgs/raw_imgs/signs/alseafallsWarning1.jpg" alt="warningIMG" class="warning" onclick="onClick(this)">
+					<img src="http://cf.forestry.oregonstate.edu/sites/cf/files/Spring%20Spray%202017.jpg" alt="warningIMG" class="warning" onclick="onClick(this)">
 				</div>
 				<div class="w3-col s10">
-					<p>{{ridearea.warningtext}}</p>
+					<p>Spring herbicide spray on the McDonald and Dunn Forest will start as early as 4/10/2017.  Exact start dates are dependent on weather conditions and contractor availability. All units on the McDonald and Dunn Forests will be sprayed by ground application utilizing backpack sprayers.  During application, staff will be positioned at roads and official trails leading into spray areas to keep people away. The date of application, the name of the chemical used and the re-entry interval will be written on the signs posted at entry points into each herbicide application area. These signs will remain in place for two weeks.</p>
+				</div>
+			</div>
+			<div class="w3-row w3-padding-8">
+				<div class="w3-col s2">
+					<img src="/imgs/raw_imgs/signs/macdunn_quickdraw2017.jpg" alt="warningIMG" class="warning" onclick="onClick(this)">
+				</div>
+				<div class="w3-col s10">
+					<p>Starting this afternoon, the Quick Draw closure will expand to include Road 680 and the "Innuendo" unauthorized trail - highlighted in blue on the map below. Roads and trails in red remain closed as well. Roads highlighted in purple (700 and 760) remain open at this point.  As a reminder, the closures remain in effect 24 hours a day, 7 days a week, and parking limitations remain in effect at the Oak Creek parking area. Please continue to observe all closure areas for your safety and the safety of the harvest crews. </p>
 				</div>
 			</div>
 
@@ -70,6 +79,14 @@
     </main>
     
     <footer id="commonFooter" ng-include="'includes/footer.htm'"></footer>
+	
+	<!-- Used for image gallery -->
+	<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  		<span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  		<div class="w3-modal-content w3-animate-zoom">
+    		<img id="img01" style="width:100%">
+  		</div>
+	</div>
 	
 </body>
 </html>
