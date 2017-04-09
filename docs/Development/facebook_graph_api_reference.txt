@@ -1,0 +1,185 @@
+Facebook-Graph API reference.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Note, you can just delete the "debug=all" parameter.
+Note, you can use the "pretty=1" to get a /n/r delimited string.
+Note, there is no way to limit the events to "upcomming", so you have to limit the number of returned results.  The results are in chrnological order.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Query a list of Events from a fixed page.
+
+FULL URL:
+https://graph.facebook.com/v2.8/gregsnonformal?access_token=EAACEdEose0cBAKhGWZA9bQI16Lr2vbF4qSxFqU0VJg16oFTSiErkO3fZCx0dKqBiftCbibSJ4gXYUexJZAqQTtjgzVtgkvr036NEsC3AopFImyTZAS7kkxN8EH4b5GzlZCFgG2bhpiIuHGo0EUlpLlVyPtlrs7OHFf3Cbx6e8cPUQ2HI2GG8J&debug=all&fields=events.limit(10)%7Bname%2Cstart_time%2Cend_time%2Cdescription%2Cplace%2Cis_canceled%2Ccover%2Cupdated_time%2Cattending_count%2Cmaybe_count%2Cinterested_count%7D&format=json&method=get&pretty=0&suppress_http_code=1
+
+fields=events.limit(10){name,start_time,end_time,description,place,is_canceled,cover,updated_time,attending_count,maybe_count,interested_count}
+
+PARSED URL PARAMETERS:
+access_token=EAACEdEose0cBAKhGWZA9bQI16Lr2vbF4qSxFqU0VJg16oFTSiErkO3fZCx0dKqBiftCbibSJ4gXYUexJZAqQTtjgzVtgkvr036NEsC3AopFImyTZAS7kkxN8EH4b5GzlZCFgG2bhpiIuHGo0EUlpLlVyPtlrs7OHFf3Cbx6e8cPUQ2HI2GG8J
+debug=all
+fields=events.limit(10)%7Bname%2Cstart_time%2Cend_time%2Cdescription%2Cplace%2Cis_canceled%2Ccover%2Cupdated_time%2Cattending_count%2Cmaybe_count%2Cinterested_count%7D
+format=json
+method=get
+pretty=0
+suppress_http_code=1
+
+
+RESPONSE:
+{
+   "events": {
+      "data": [
+         {
+            "name": "Test Event 03",
+            "start_time": "2017-04-10T08:00:00-0700",
+            "end_time": "2017-04-10T09:00:00-0700",
+            "description": "A Test Event 03",
+            "place": {
+               "name": "Avery City Park",
+               "location": {
+                  "city": "Corvallis",
+                  "country": "United States",
+                  "latitude": 44.553155413569,
+                  "longitude": -123.27182152988,
+                  "state": "OR",
+                  "street": "SW Avery Ave",
+                  "zip": "97333"
+               },
+               "id": "142312069135193"
+            },
+            "is_canceled": false,
+            "cover": {
+               "offset_x": 0,
+               "offset_y": 50,
+               "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/17834364_1957710347793692_5569050191385705493_o.jpg?oh=a85f1e877364412030b944ccd3bb2ee3&oe=595C807B",
+               "id": "1957710347793692"
+            },
+            "updated_time": "2017-04-09T06:18:26+0000",
+            "attending_count": 0,
+            "maybe_count": 0,
+            "interested_count": 0,
+            "id": "149272722267708"
+         },
+         {
+            "name": "Test Event 02",
+            "start_time": "2017-04-09T13:00:00-0700",
+            "end_time": "2017-04-09T16:00:00-0700",
+            "description": "A Test Event 02",
+            "place": {
+               "name": "Avery City Park",
+               "location": {
+                  "city": "Corvallis",
+                  "country": "United States",
+                  "latitude": 44.553155413569,
+                  "longitude": -123.27182152988,
+                  "state": "OR",
+                  "street": "SW Avery Ave",
+                  "zip": "97333"
+               },
+               "id": "142312069135193"
+            },
+            "is_canceled": false,
+            "cover": {
+               "offset_x": 0,
+               "offset_y": 50,
+               "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/17854694_1957706831127377_1034982779379251925_o.jpg?oh=894fd5c328817ee42c86bcaffbcf4204&oe=599A31FA",
+               "id": "1957706831127377"
+            },
+            "updated_time": "2017-04-09T06:16:32+0000",
+            "attending_count": 0,
+            "maybe_count": 0,
+            "interested_count": 0,
+            "id": "1254216964699668"
+         },
+         {
+            "name": "Test Event 01",
+            "start_time": "2017-04-09T08:00:00-0700",
+            "end_time": "2017-04-09T09:00:00-0700",
+            "description": "A Test Event 01.",
+            "place": {
+               "name": "Avery City Park",
+               "location": {
+                  "city": "Corvallis",
+                  "country": "United States",
+                  "latitude": 44.553155413569,
+                  "longitude": -123.27182152988,
+                  "state": "OR",
+                  "street": "SW Avery Ave",
+                  "zip": "97333"
+               },
+               "id": "142312069135193"
+            },
+            "is_canceled": false,
+            "cover": {
+               "offset_x": 0,
+               "offset_y": 50,
+               "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/17834783_1957660254465368_5464237112423226862_o.jpg?oh=8652985adab7517e5fc24d81bde39931&oe=5999699F",
+               "id": "1957660254465368"
+            },
+            "updated_time": "2017-04-09T05:25:27+0000",
+            "attending_count": 1,
+            "maybe_count": 0,
+            "interested_count": 0,
+            "id": "1942452889317436"
+         }
+      ],
+      "paging": {
+         "cursors": {
+            "before": "MTQ5MjcyNzIyMjY3NzA4",
+            "after": "MTk0MjQ1Mjg4OTMxNzQzNgZDZD"
+         }
+      }
+   },
+   "id": "1954279694803424"
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Query An Event, with known Event ID.
+
+FULL URL:
+https://graph.facebook.com/v2.8/1942452889317436?access_token=EAACEdEose0cBAH3UOTVIXrNBUYeuyPIZCHRe4ElivwPTbZCAuc7MXB4ZBTJlrI0WWicjjZAdYZCVThetFYqLFXtr754Y398ZCGFJswpdIJJ46Q5sMpcPg7MZCF4vEblkZCstZB6DyDLIexY174hEcxGSaV95DARjnTgpkFNUGZAOLJ2Q1q6fZASg3rU&debug=all&fields=name%2Cstart_time%2Cend_time%2Cdescription%2Cplace%2Ccover%2Cis_canceled&format=json&method=get&pretty=0&suppress_http_code=1
+
+PARSED URL PARAMETERS:
+access_token=EAACEdEose0cBAH3UOTVIXrNBUYeuyPIZCHRe4ElivwPTbZCAuc7MXB4ZBTJlrI0WWicjjZAdYZCVThetFYqLFXtr754Y398ZCGFJswpdIJJ46Q5sMpcPg7MZCF4vEblkZCstZB6DyDLIexY174hEcxGSaV95DARjnTgpkFNUGZAOLJ2Q1q6fZASg3rU
+debug=all
+fields=name%2Cstart_time%2Cend_time%2Cdescription%2Cplace%2Ccover%2Cis_canceled
+format=json
+method=get
+pretty=0
+suppress_http_code=1
+
+RESPONSE:
+{
+   "name": "Test Event 01",
+   "start_time": "2017-04-09T08:00:00-0700",
+   "end_time": "2017-04-09T09:00:00-0700",
+   "description": "A Test Event 01.",
+   "place": {
+      "name": "Avery City Park",
+      "location": {
+         "city": "Corvallis",
+         "country": "United States",
+         "latitude": 44.553155413569,
+         "longitude": -123.27182152988,
+         "state": "OR",
+         "street": "SW Avery Ave",
+         "zip": "97333"
+      },
+      "id": "142312069135193"
+   },
+   "cover": {
+      "offset_x": 0,
+      "offset_y": 50,
+      "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/17834783_1957660254465368_5464237112423226862_o.jpg?oh=8652985adab7517e5fc24d81bde39931&oe=5999699F",
+      "id": "1957660254465368"
+   },
+   "is_canceled": false,
+   "id": "1942452889317436",
+   "__debug__": {
+      
+   }
+}
+
+
+
