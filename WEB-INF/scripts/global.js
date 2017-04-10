@@ -7,7 +7,8 @@ function HeroBanner() {
 	// We want the Hero to be 1600x!
 	//convert -resize 1600x bareTrail2.jpg bareTrail2.jpg
     this.images = [
-		{name:"Shuttle Days", src:"/imgs/raw_imgs/equipment/eqp_2.JPG"},
+		{name:"", src:"/imgs/raw_imgs/equipment/eqp_1.JPG"},
+        {name:"", src:"/imgs/raw_imgs/equipment/eqp_2.JPG"},
         {name:"A Cool Img", src:"/imgs/raw_imgs/bare_trail/bareTrail1.jpg"},
 		{name:"A Cool Img Too", src:"/imgs/raw_imgs/bare_trail/bareTrail2.jpg"},
         {name:"Building", src:"/imgs/raw_imgs/building/building_1.jpg"},
@@ -42,7 +43,7 @@ function HeroBanner() {
     
     this.getColorCode = function(n) {
         if (n == slideIndex) {
-            return "w3-white";
+            return "w3-green";
         }
         return "";
     }
