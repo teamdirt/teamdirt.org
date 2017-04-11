@@ -53,9 +53,6 @@ function HeroBanner() {
 
 function EventController($http) {
 	
-	var isEventDataPullInProcess = false;
-	var isEventDataPulled = false;
-	
 	// Facebook Config
 	var pageID = 'gregsnonformal';
 	//var pageID = 'teamdirtIMBA';
@@ -79,9 +76,7 @@ function EventController($http) {
 		}).then(function successCallback(response) {
 			// this callback will be called asynchronously, when the response is available
 			//console.log(JSON.stringify(response));
-			
-			isEventDataPullInProcess = true;
-			
+				
 			// parse the events
 			var listEvents = response.data.events.data;
 			
@@ -124,10 +119,7 @@ function EventController($http) {
 				// Save the events
 				tdEvents.push(listEvents[i]);
 			}
-			
-			// Make sure, that we only query upon page refresh
-			isEventDataPullInProcess = false;
-			isEventDataPulled = true;
+		
 			
 		  }, function errorCallback(response) {
 			// called asynchronously if an error occurs or server returns response with an error status.
@@ -158,8 +150,66 @@ function EventController($http) {
 		return tdEvents;
 	}
 	
+	this.isFaceBookError = function() {
+		return isFaceBookError;
+	}
+	
+}
+
+function LatestNewsController($http) {
+	
+	// Facebook Config
+	var pageID = 'teamdirtIMBA';
+	var numEventsToPull = '1';
+	var teamDirtToken = '117286765480931|yifHszimouD4XXdfR9H0ydB4Rg0';
+	var isFaceBookError = false;
+	
+	var urlPage = 'https://graph.facebook.com/v2.8/' + pageID + '/feed?access_token=' + teamDirtToken + '&fields=story%2Ccreated_time%2Cmessage%2Cfull_picture&format=json&limit=1&method=get&pretty=0&suppress_http_code=1';
+	
+	var feedItem = {};
+	
+	var pullFeedData = function() {
+		
+		console.log('Make call to: ' +  urlPage);
+		
+		// We first query facebook for all events on page /teamdirtIMBA
+		$http({
+  			method: 'GET',
+  			url: urlPage
+		}).then(function successCallback(response) {
+			// this callback will be called asynchronously, when the response is available
+			//console.log(JSON.stringify(response));
+			
+			feedItem = response.data.data[0];
+			
+			// Format the response date
+			var createdDate = new Date(feedItem.created_time);	
+			feedItem.created_time_string = createdDate.toLocaleString();
+				
+		  }, function errorCallback(response) {
+			// called asynchronously if an error occurs or server returns response with an error status.
+			
+			// Error flag set, and clear events.
+			isFaceBookError = true;
+		  });
+		
+	}
+	
+	this.pullFacebookFeedData = function() {
+		pullFeedData();
+	}
+	
+	this.getLatestFeedItem = function() {
+		return feedItem;
+	}
+	
+	this.isFaceBookError = function() {
+		return isFaceBookError;
+	}
+	
 }
 
 // Add the Controllers
 tdApp.controller('HeroBanner', HeroBanner);
 tdApp.controller('EventController', EventController);
+tdApp.controller('LatestNewsController', LatestNewsController);

@@ -5,6 +5,10 @@ div.heroBanner {
 	background-position: center;
 }
 
+img.pressImg {
+    max-height:200px;
+}
+
 /* Sponsor Pic Dimensions */
 img.platinum {
 	width:100px;

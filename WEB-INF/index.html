@@ -43,57 +43,79 @@
 John Adams persuaded the committee to select Thomas Jefferson to compose the original draft of the document,[3] which Congress would edit to produce the final version. The Declaration was ultimately a formal explanation of why Congress had voted on July 2 to declare independence from Great Britain, more than a year after the outbreak of the American Revolutionary War. The next day, John Adams wrote to his wife Abigail: "The Second Day of July 1776, will be the most memorable Epocha, in the History of America."[4] But Independence Day is actually celebrated on July 4, the date that the Declaration of Independence was approved.</p>
         </header>
         
-        <section id="mainSection" class="w3-row-padding">
 
-			<div id="eventsContainer" ng-controller="EventController as eventController" ng-init="eventController.pullFacebookEventData()" class="w3-container w3-col s7">
-                <h4 class="subsection">Upcoming Events</h4>
+        <section id="mainSection" class="w3-row-padding">
+			
+			<div id="contentContainer" class="w3-container w3-col s7">
 				
-				<!--button class="w3-button w3-blue" ng-click="eventController.testRequest()">Send Test Request</button-->
-				
-				<div ng-switch on="eventController.isNotEmptyEventList()">
-					<div ng-switch-when="false">
-						<p ng-if="eventController.isFaceBookError">Error while polling for Facebook events.  Please check the teamDirt Facebook events page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/events/" target="_blank">TeamDirtIMBA Events</a>.</p>
-						<p ng-if="!eventController.isFaceBookError">Currently, no future events are published.</p>
-					</div>
-        			<div ng-switch-when="true">
-						<div ng-repeat="eachEvent in eventController.getEventList()" class="w3-card-4 event">
-							<div class="w3-display-container">
-								<img src="{{eachEvent.cover.source}}" alt="eventImg" class="event">
-								<div class="w3-padding w3-display-topleft"><h5 class="w3-round eventTitle">{{eachEvent.name}}</h5></div>
+                <div id="latestNews" ng-controller="LatestNewsController as newsController" ng-init="newsController.pullFacebookFeedData()" class="w3-container w3-margin-bottom">
+					<h4 class="subsection">Latest News</h4>
+					<div ng-switch on="newsController.isFaceBookError()">
+						<div ng-switch-when="true" class="w3-card-4 w3-padding">
+							<p>Please check the teamDirt Facebook page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/" target="_blank">TeamDirtIMBA</a>.
+						</div>
+						<div ng-switch-when="false" class="w3-card-4 w3-padding w3-row-padding">
+							<img ng-src="{{newsController.getLatestFeedItem().full_picture}}" alt="eventImg" class="w3-col s4 pressImg">
+							<div class="w3-col s8">
+								<h6><b>{{newsController.getLatestFeedItem().story}}</b></h6>
+								<p>Updated: {{newsController.getLatestFeedItem().created_time_string}}</p>
+								<p>{{newsController.getLatestFeedItem().message}}</p>
 							</div>
-							<div class="w3-container">
-								<div class="w3-container">
-									<table class="w3-table">
-										<tr>
-											<td><b>Date/Time:</b></td>
-											<td>{{eachEvent.startDateString}}<br>{{eachEvent.endDateString}}</td>
-										</tr>
-										<tr>
-											<td><b>Location:</b></td>
-											<td>{{eachEvent.place.name}}</td>
-										</tr>
-									</table>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div id="eventsContainer" ng-controller="EventController as eventController" ng-init="eventController.pullFacebookEventData()" class="w3-container">
+					<h4 class="subsection">Upcoming Events</h4>
+
+					<!--button class="w3-button w3-blue" ng-click="eventController.testRequest()">Send Test Request</button-->
+
+					<div ng-switch on="eventController.isNotEmptyEventList()">
+						<div ng-switch-when="false">
+							<p ng-if="eventController.isFaceBookError()">Please check the teamDirt Facebook events page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/events/" target="_blank">TeamDirtIMBA Events</a>.</p>
+							<p ng-if="!eventController.isFaceBookError()">Currently, no future events are published.</p>
+						</div>
+						<div ng-switch-when="true">
+							<div ng-repeat="eachEvent in eventController.getEventList()" class="w3-card-4 event">
+								<div class="w3-display-container">
+									<img src="{{eachEvent.cover.source}}" alt="eventImg" class="event">
+									<div class="w3-padding w3-display-topleft"><h5 class="w3-round eventTitle">{{eachEvent.name}}</h5></div>
 								</div>
 								<div class="w3-container">
-									<h6><b>Description:</b></h6>
-									<p>{{eachEvent.description}}</p>
-								</div>
-								<div class="w3-container">
-									<table class="w3-table-all w3-centered">
-										<tr>
-											<th>Going</th>
-											<th>Maybe</th>
-											<th>Interested</th>
-										</tr>
-										<tr>
-											<td>{{eachEvent.attending_count}}</td>
-											<td>{{eachEvent.maybe_count}}</td>
-											<td>{{eachEvent.interested_count}}</td>
-										</tr>
-									</table>
-								</div>
-								<div class="w3-container w3-margin">
-									<a ng-href="https://www.facebook.com/events/{{eachEvent.id}}/" target="_blank"><button class="w3-button w3-border w3-hover-green w3-round-large w3-right tdbutton">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
+									<div class="w3-container">
+										<table class="w3-table">
+											<tr>
+												<td><b>Date/Time:</b></td>
+												<td>{{eachEvent.startDateString}}<br>{{eachEvent.endDateString}}</td>
+											</tr>
+											<tr>
+												<td><b>Location:</b></td>
+												<td>{{eachEvent.place.name}}</td>
+											</tr>
+										</table>
+									</div>
+									<div class="w3-container">
+										<h6><b>Description:</b></h6>
+										<p>{{eachEvent.description}}</p>
+									</div>
+									<div class="w3-container">
+										<table class="w3-table-all w3-centered">
+											<tr>
+												<th>Going</th>
+												<th>Maybe</th>
+												<th>Interested</th>
+											</tr>
+											<tr>
+												<td>{{eachEvent.attending_count}}</td>
+												<td>{{eachEvent.maybe_count}}</td>
+												<td>{{eachEvent.interested_count}}</td>
+											</tr>
+										</table>
+									</div>
+									<div class="w3-container w3-margin">
+										<a ng-href="https://www.facebook.com/events/{{eachEvent.id}}/" target="_blank"><button class="w3-button w3-border w3-hover-green w3-round-large w3-right tdbutton">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
+									</div>
 								</div>
 							</div>
 						</div>
