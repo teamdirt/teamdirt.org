@@ -4,6 +4,8 @@ div.heroBanner {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+/* Sponsor Pic Dimensions */
 img.platinum {
 	width:100px;
     height:100px;
@@ -28,17 +30,12 @@ div.event {
 }
 img.event {
     width:100%;
-    max-height:100px;
+    max-height:200px;
 }
-h5.event {
+h5.eventTitle {
     font-weight: bold;
     margin: 0px;
-}
-h6.event {
-    font-style: italic;
-    margin: 0px;
-}
-p.event {
-    text-indent: 10px;
-    margin: 0px;
+	color:black;
+	background-color: #9ECC9E;
+	padding: 5px;
 }

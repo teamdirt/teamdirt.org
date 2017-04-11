@@ -10,18 +10,16 @@ Note, there is no way to limit the events to "upcomming", so you have to limit t
 Query a list of Events from a fixed page.
 
 FULL URL:
-https://graph.facebook.com/v2.8/gregsnonformal?access_token=EAACEdEose0cBAKhGWZA9bQI16Lr2vbF4qSxFqU0VJg16oFTSiErkO3fZCx0dKqBiftCbibSJ4gXYUexJZAqQTtjgzVtgkvr036NEsC3AopFImyTZAS7kkxN8EH4b5GzlZCFgG2bhpiIuHGo0EUlpLlVyPtlrs7OHFf3Cbx6e8cPUQ2HI2GG8J&debug=all&fields=events.limit(10)%7Bname%2Cstart_time%2Cend_time%2Cdescription%2Cplace%2Cis_canceled%2Ccover%2Cupdated_time%2Cattending_count%2Cmaybe_count%2Cinterested_count%7D&format=json&method=get&pretty=0&suppress_http_code=1
+https://graph.facebook.com/v2.8/gregsnonformal?access_token=117286765480931|yifHszimouD4XXdfR9H0ydB4Rg0&fields=events.include_canceled(true).limit(10){name,start_time,end_time,description,place,is_canceled,cover,updated_time,attending_count,maybe_count,interested_count}&format=json&method=get&pretty=1
 
-fields=events.limit(10){name,start_time,end_time,description,place,is_canceled,cover,updated_time,attending_count,maybe_count,interested_count}
+fields=events.include_canceled(true).limit(10){name,start_time,end_time,description,place,is_canceled,cover,updated_time,attending_count,maybe_count,interested_count}&format=json&method=get&pretty=1
 
 PARSED URL PARAMETERS:
-access_token=EAACEdEose0cBAKhGWZA9bQI16Lr2vbF4qSxFqU0VJg16oFTSiErkO3fZCx0dKqBiftCbibSJ4gXYUexJZAqQTtjgzVtgkvr036NEsC3AopFImyTZAS7kkxN8EH4b5GzlZCFgG2bhpiIuHGo0EUlpLlVyPtlrs7OHFf3Cbx6e8cPUQ2HI2GG8J
-debug=all
-fields=events.limit(10)%7Bname%2Cstart_time%2Cend_time%2Cdescription%2Cplace%2Cis_canceled%2Ccover%2Cupdated_time%2Cattending_count%2Cmaybe_count%2Cinterested_count%7D
+access_token=117286765480931|yifHszimouD4XXdfR9H0ydB4Rg0
+fields=events.include_canceled(true).limit(10){name,start_time,end_time,description,place,is_canceled,cover,updated_time,attending_count,maybe_count,interested_count}
 format=json
 method=get
-pretty=0
-suppress_http_code=1
+pretty=1
 
 
 RESPONSE:
@@ -77,7 +75,7 @@ RESPONSE:
                },
                "id": "142312069135193"
             },
-            "is_canceled": false,
+            "is_canceled": true,
             "cover": {
                "offset_x": 0,
                "offset_y": 50,

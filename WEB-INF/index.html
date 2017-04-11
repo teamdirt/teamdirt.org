@@ -12,7 +12,7 @@
     <link rel="icon" href="favicon.png">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/global.js"></script>
+    <script type="text/javascript" src="/scripts/mainpage.js"></script>
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -45,37 +45,60 @@ John Adams persuaded the committee to select Thomas Jefferson to compose the ori
         
         <section id="mainSection" class="w3-row-padding">
 
-			<div id="eventsContainer" class="w3-container w3-col s7">
+			<div id="eventsContainer" ng-controller="EventController as eventController" class="w3-container w3-col s7">
                 <h4 class="subsection">Upcoming Events</h4>
-                <div class="w3-row">
-					<div class="w3-col s5 w3-card-4 event">
-						<div class="w3-display-container">
-							<img src="imgs/placeholder.png" alt="eventImg" class="event">
-							<div class="w3-padding w3-display-topleft w3-light-grey w3-opacity-min"><h5 class="event"><b>EventName</b></h5></div>
-						</div>
-						<div class="w3-container">
-							<h6 class="event">Date/Time:</h6>
-							<p class="event">03.03.2017 @ 9am</p>
-							<h6 class="event">Location:</h6>
-							<p class="event">Oak Creek Gate, MacDunn</p>
-							<a href="https://www.facebook.com/events/1227206854024848/" class="event" target="_blank"><button class="w3-button w3-border w3-hover-green w3-round-large w3-right tdbutton">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
-						</div>
-					</div>
-                    <div class="w3-col s5 w3-card-4 event">
-						<div class="w3-display-container">
-							<img src="imgs/placeholder.png" alt="eventImg" class="event">
-							<div class="w3-padding w3-display-topleft w3-light-grey w3-opacity-min"><h5 class="event"><b>EventName</b></h5></div>
-						</div>
-						<div class="w3-container">
-							<h6 class="event">Date/Time:</h6>
-							<p class="event">03.03.2017 @ 9am</p>
-							<h6 class="event">Location:</h6>
-							<p class="event">Oak Creek Gate, MacDunn</p>
-							<a href="https://www.facebook.com/events/1227206854024848/" class="event" target="_blank"><button class="w3-button w3-border w3-hover-green w3-round-large w3-right tdbutton">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
-						</div>
-					</div>
-                </div>            
+				<button class="w3-button w3-blue" ng-click="eventController.testRequest()">Send Test Request</button>
 				
+				<div ng-switch on="eventController.isNotEmptyEventList()">
+					<div ng-switch-when="false">
+						<p ng-if="eventController.isFaceBookError">Error while polling for Facebook events.  Please check the teamDirt Facebook page at <a href="https://www.facebook.com/TeamDirtIMBA/" target="_blank">TeamDirtIMBA</a>.</p>
+						<p ng-if="!eventController.isFaceBookError">Currently, no future events are planned.</p>
+					</div>
+        			<div ng-switch-when="true">
+						<div ng-repeat="eachEvent in eventController.tdEvents" class="w3-card-4 event">
+							<div class="w3-display-container">
+								<img src="imgs/placeholder.png" alt="eventImg" class="event">
+								<div class="w3-padding w3-display-topleft"><h5 class="w3-round eventTitle">EventName</h5></div>
+							</div>
+							<div class="w3-container">
+								<div class="w3-container">
+									<table class="w3-table">
+										<tr>
+											<td><b>Date/Time:</b></td>
+											<td>03.03.2017 @ 9am</td>
+										</tr>
+										<tr>
+											<td><b>Location:</b></td>
+											<td>Oak Creek Gate, MacDunn</td>
+										</tr>
+									</table>
+								</div>
+								<div class="w3-container">
+									<h6><b>Description:</b></h6>
+									<p>John Adams persuaded the committee to select Thomas Jefferson to compose the original draft of the document,[3] which Congress would edit to produce the final version. The Declaration was ultimately a formal explanation of why Congress had voted on July 2 to declare independence from Great Britain, more than a year after the outbreak of the American Revolutionary War. The next day, John Adams wrote to his wife Abigail: "The Second Day of July 1776, will be the most memorable Epocha, in the History of America."[4] But Independence Day</p>
+								</div>
+								<div class="w3-container">
+									<table class="w3-table-all w3-centered">
+										<tr>
+											<th>Going</th>
+											<th>Maybe</th>
+											<th>Interested</th>
+										</tr>
+										<tr>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+									</table>
+								</div>
+								<div class="w3-container w3-margin">
+									<a href="https://www.facebook.com/events/1227206854024848/" target="_blank"><button class="w3-button w3-border w3-hover-green w3-round-large w3-right tdbutton">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
             </div>
 				
             <div id="sponsorContainer" class="w3-container w3-col s5 w3-round-xlarge w3-card-4" style="min-width:400px;">
