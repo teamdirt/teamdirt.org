@@ -27,6 +27,7 @@ img.bronze {
     height:25px;
 }
 
+/* Events */
 div.event {
 	margin: 15px;
 	padding: 5px;
@@ -42,4 +43,7 @@ h5.eventTitle {
 	color:black;
 	background-color: #9ECC9E;
 	padding: 5px;
+}
+*.canceled {
+	text-decoration: line-through;
 }

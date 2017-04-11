@@ -79,19 +79,31 @@ John Adams persuaded the committee to select Thomas Jefferson to compose the ori
 						<div ng-switch-when="true">
 							<div ng-repeat="eachEvent in eventController.getEventList()" class="w3-card-4 event">
 								<div class="w3-display-container">
-									<img src="{{eachEvent.cover.source}}" alt="eventImg" class="event">
-									<div class="w3-padding w3-display-topleft"><h5 class="w3-round eventTitle">{{eachEvent.name}}</h5></div>
+									<img ng-src="{{eachEvent.cover.source}}" alt="eventImg" class="event">
+									<div class="w3-padding w3-display-topleft">
+										<div ng-switch on="eachEvent.is_canceled">
+											<h5 ng-switch-when="false" class="w3-round eventTitle">{{eachEvent.name}}</h5>
+											<h5 ng-switch-when="true" class="w3-round eventTitle" style="color:white;background-color:red;">Canceled: <span class="canceled">{{eachEvent.name}}</span></h5>
+										</div>
+										
+									</div>
 								</div>
 								<div class="w3-container">
 									<div class="w3-container">
 										<table class="w3-table">
 											<tr>
 												<td><b>Date/Time:</b></td>
-												<td>{{eachEvent.startDateString}}<br>{{eachEvent.endDateString}}</td>
+												<td ng-switch on="eachEvent.is_canceled">
+													<div ng-switch-when="false">{{eachEvent.startDateString}}<br>{{eachEvent.endDateString}}</div>
+													<div ng-switch-when="true">Canceled</div>
+												</td>	
 											</tr>
 											<tr>
 												<td><b>Location:</b></td>
-												<td>{{eachEvent.place.name}}</td>
+												<td ng-switch on="eachEvent.is_canceled">
+													<div ng-switch-when="false">{{eachEvent.place.name}}</div>
+													<div ng-switch-when="true">Canceled</div>
+												</td>
 											</tr>
 										</table>
 									</div>
@@ -114,7 +126,7 @@ John Adams persuaded the committee to select Thomas Jefferson to compose the ori
 										</table>
 									</div>
 									<div class="w3-container w3-margin">
-										<a ng-href="https://www.facebook.com/events/{{eachEvent.id}}/" target="_blank"><button class="w3-button w3-border w3-hover-green w3-round-large w3-right tdbutton">More Info&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
+										<a ng-href="https://www.facebook.com/events/{{eachEvent.id}}/" target="_blank"><button class="w3-button w3-border w3-hover-green w3-round-large w3-right tdbutton">More Info/RSVP&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
 									</div>
 								</div>
 							</div>
