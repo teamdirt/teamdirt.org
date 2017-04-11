@@ -19,11 +19,15 @@ h4.subsection {
 }
 
 .tdbutton {
-    background-color: #72AE72;
+    /*background-color: #72AE72;*/
+	background-color: black;
+	color: white;
 }
 
 .tdbutton:hover {
-    background-color: #4D924D;
+    /*background-color: #4D924D;*/
+	background-color: #4D924D;
+	color: white;
 }
 
 

@@ -1,0 +1,25 @@
+img.traillead {
+	max-width: 100%;
+	max-height: 150px;
+}
+
+img.meeting {
+	max-width: 100%;
+}
+
+div.traillead {
+	min-width: 100px;
+}
+
+div.meeting {
+	min-width: 100px;
+}
+
+img.tool {
+	max-width: 100%;
+	max-height: 150px;
+}
+		
+div.tool {
+	min-width: 100px;
+}
