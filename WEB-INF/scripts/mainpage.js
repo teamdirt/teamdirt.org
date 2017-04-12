@@ -159,12 +159,14 @@ function EventController($http) {
 function LatestNewsController($http) {
 	
 	// Facebook Config
+    //var pageID = 'gregsnonformal';
 	var pageID = 'teamdirtIMBA';
 	var numEventsToPull = '1';
 	var teamDirtToken = '117286765480931|yifHszimouD4XXdfR9H0ydB4Rg0';
 	var isFaceBookError = false;
+    var isPostTypeSharedLink = false;
 	
-	var urlPage = 'https://graph.facebook.com/v2.8/' + pageID + '/feed?access_token=' + teamDirtToken + '&fields=story%2Ccreated_time%2Cmessage%2Cfull_picture&format=json&limit=1&method=get&pretty=0&suppress_http_code=1';
+	var urlPage = 'https://graph.facebook.com/v2.8/' + pageID + '/feed?access_token=' + teamDirtToken + '&fields=created_time,message,full_picture,story,link,description,name&format=json&limit=' + numEventsToPull +  '&method=get&pretty=0&suppress_http_code=1';
 	
 	var feedItem = {};
 	
@@ -181,6 +183,13 @@ function LatestNewsController($http) {
 			//console.log(JSON.stringify(response));
 			
 			feedItem = response.data.data[0];
+            
+            // We need to shift the data items if this is a shared link or story
+            if (feedItem.story === undefined) {
+                feedItem.story = 'Shared Link';
+                
+                isPostTypeSharedLink = true;
+            }
 			
 			// Format the response date
 			var createdDate = new Date(feedItem.created_time);	
@@ -206,6 +215,10 @@ function LatestNewsController($http) {
 	this.isFaceBookError = function() {
 		return isFaceBookError;
 	}
+    
+    this.isSharedLink = function() {
+        return isPostTypeSharedLink;
+    }
 	
 }
 

@@ -12,6 +12,7 @@
     <link rel="icon" href="favicon.png">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script type="text/javascript" src="/scripts/mainpage.js"></script>
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -55,11 +56,12 @@ John Adams persuaded the committee to select Thomas Jefferson to compose the ori
 							<p>Please check the teamDirt Facebook page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/" target="_blank">TeamDirtIMBA</a>.
 						</div>
 						<div ng-switch-when="false" class="w3-card-4 w3-padding w3-row-padding">
-							<img ng-src="{{newsController.getLatestFeedItem().full_picture}}" alt="eventImg" class="w3-col s4 pressImg">
+                            <a ng-href="{{newsController.getLatestFeedItem().link}}" target="_blank"><img ng-src="{{newsController.getLatestFeedItem().full_picture}}" alt="eventImg" class="w3-col s4 pressImg"></a>
 							<div class="w3-col s8">
 								<h6><b>{{newsController.getLatestFeedItem().story}}</b></h6>
 								<p>Updated: {{newsController.getLatestFeedItem().created_time_string}}</p>
 								<p>{{newsController.getLatestFeedItem().message}}</p>
+                                <p ng-if="newsController.isSharedLink"><a ng-href="{{newsController.getLatestFeedItem().link}}" target="_blank">{{newsController.getLatestFeedItem().name}}</a><br>{{newsController.getLatestFeedItem().description}}</p>
 							</div>
 						</div>
 					</div>
