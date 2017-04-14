@@ -6,9 +6,9 @@ var widgetCheck = false;
 
 // Used for the modal image viewer
 function onClick(element) {
-  			document.getElementById("img01").src = element.src;
-			document.getElementById("modal01").style.display = "block";
-		}
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+    }
 
 // Define the Application
 // NOTE:  We have to clear the location prefix for 1.6+
