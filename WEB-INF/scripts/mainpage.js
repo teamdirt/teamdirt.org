@@ -5,7 +5,7 @@ function HeroBanner() {
     var slideIndex = 0;
     
 	// In the near future, this will be done with a Rest call to teamdirt.org
-	// We want the Hero to be 2000x!
+	// We want the Hero to be 2000x402!
 	//convert -resize 2000x bareTrail2.jpg bareTrail2.jpg
     this.images = [
 		{name:"", src:"/imgs/raw_imgs/equipment/eqp_2.JPG"},
