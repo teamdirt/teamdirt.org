@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Team Dirt IMBA Mountain Bike Chapter" >
+    <meta name="keywords" content="team dirt, teamdirt" >
+    
+    <base href="../" target="_parent" >
+    <title>Team Dirt</title>
+    <link rel="icon" href="favicon.png">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/global.js"></script>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/teamdirt.css">
+</head>
+<body ng-app="tdApp">
+    
+    <header id="commonHeader" ng-include="'includes/navBar.htm'"></header>
+    
+    <main id="mainContainer" class="w3-panel">
+        <header id="mainHeader">
+            <h1>Planning Calendar</h1>
+        </header>
+        
+		<section id="description" class="w3-panel">
+			<h4 class="subsection">Description</h4>
+			<p>The Declaration of Independence is the statement adopted by the Second Continental Congress meeting at the Pennsylvania State House (Independence Hall) in Philadelphia on July 4, 1776, which announced that the thirteen American colonies,[2] then at war with the Kingdom of Great Britain, regarded themselves as thirteen newly independent sovereign states, and no longer under British rule. Instead they formed a new nation—the United States of America. John Adams was a leader in pushing for independence, which was passed on July 2 with no opposing vote cast. A committee of five had already drafted the formal declaration, to be ready when Congress voted on independence. The term "Declaration of Independence" is not used in the document itself.
+
+John Adams persuaded the committee to select Thomas Jefferson to compose the original draft of the document,[3] which Congress would edit to produce the final version. The Declaration was ultimately a formal explanation of why Congress had voted on July 2 to declare independence from Great Britain, more than a year after the outbreak of the American Revolutionary War. The next day, John Adams wrote to his wife Abigail: "The Second Day of July 1776, will be the most memorable Epocha, in the History of America."[4] But Independence Day is actually celebrated on July 4, the date that the Declaration of Independence was approved.</p>
+		</section>
+        
+		<section class="w3-panel w3-center">
+            <iframe src="https://calendar.google.com/calendar/embed?title=Team%20Dirt%20%28Build%20Days%20%2B%20Meetings%29&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=2629oa6e563eo6tv5d7kfbou98%40group.calendar.google.com&amp;color=%23060D5E&amp;src=66tun9etgti0oc5m0gb8prphc0%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		</section>
+        
+        <footer></footer>
+    </main>
+    
+    <footer id="commonFooter" ng-include="'includes/footer.htm'"></footer>
+	    
+</body>
+</html>
