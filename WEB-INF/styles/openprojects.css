@@ -7,8 +7,10 @@ img[id="map"] {
 }
 
 img.album {
-	max-width: 100%;
-	max-height: 150px;
+	max-width: 250px;
+    max-height: 300px;
+    padding: 16px;
+    cursor:pointer;
 }
 
 img.partner {

@@ -1,5 +1,5 @@
 // Define the Application
-var tdApp = angular.module('tdApp', []);
+//var tdApp = angular.module('tdApp', []);
 
 function HeroBanner() {
     var slideIndex = 0;
@@ -54,13 +54,10 @@ function HeroBanner() {
 function EventController($http) {
 	
 	// Facebook Config
-	var pageID = 'gregsnonformal';
-	//var pageID = 'teamdirtIMBA';
 	var removePastEvents = true;
 	var numEventsToPull = '20';
-	var teamDirtToken = '117286765480931|yifHszimouD4XXdfR9H0ydB4Rg0';
 	
-	var urlPage = 'https://graph.facebook.com/v2.8/'+ pageID +'?access_token=' + teamDirtToken + '&fields=events.include_canceled(true).limit(' + numEventsToPull + '){name,start_time,end_time,description,place,is_canceled,cover,updated_time,attending_count,maybe_count,interested_count}&format=json&method=get';
+	var urlPage = 'https://graph.facebook.com/' + facebookParams.graphAPIVersion + '/'+ facebookParams.pageID +'?access_token=' + facebookParams.teamDirtToken + '&fields=events.include_canceled(true).limit(' + numEventsToPull + '){name,start_time,end_time,description,place,is_canceled,cover,updated_time,attending_count,maybe_count,interested_count}&format=json&method=get';
 	
 	var tdEvents = [];
 	var isFaceBookError = false;
@@ -159,14 +156,11 @@ function EventController($http) {
 function LatestNewsController($http) {
 	
 	// Facebook Config
-    //var pageID = 'gregsnonformal';
-	var pageID = 'teamdirtIMBA';
 	var numEventsToPull = '1';
-	var teamDirtToken = '117286765480931|yifHszimouD4XXdfR9H0ydB4Rg0';
 	var isFaceBookError = false;
     var isPostTypeSharedLink = false;
 	
-	var urlPage = 'https://graph.facebook.com/v2.8/' + pageID + '/feed?access_token=' + teamDirtToken + '&fields=created_time,message,full_picture,story,link,description,name&format=json&limit=' + numEventsToPull +  '&method=get&pretty=0&suppress_http_code=1';
+	var urlPage = 'https://graph.facebook.com/' + facebookParams.graphAPIVersion + '/' + facebookParams.pageID + '/feed?access_token=' + facebookParams.teamDirtToken + '&fields=created_time,message,full_picture,story,link,description,name&format=json&limit=' + numEventsToPull +  '&method=get&pretty=0&suppress_http_code=1';
 	
 	var feedItem = {};
 	

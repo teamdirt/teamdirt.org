@@ -4,16 +4,6 @@ script.setAttribute("src", "https://es.pinkbike.org/ttl-86400/sprt/j/trailforks/
 document.getElementsByTagName("head")[0].appendChild(script); 
 var widgetCheck = false;
 
-// Used for the modal image viewer
-function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-    }
-
-// Define the Application
-// NOTE:  We have to clear the location prefix for 1.6+
-var tdApp = angular.module('tdApp', []);
-
 // Static Values for the Trail Areas
 tdApp.value("areaInfo",
 			{alseafalls:{name:"Alsea Falls Area",rid:3941,isWarning:true},

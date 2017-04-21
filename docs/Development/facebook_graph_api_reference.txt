@@ -167,3 +167,134 @@ RESPONSE:
 }
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Query a limited set of photos from a known album ID.
+
+FULL URL:
+https://graph.facebook.com/v2.9/1962865460611514?access_token=117286765480931%7CyifHszimouD4XXdfR9H0ydB4Rg0&debug=all&fields=name%2Ccount%2Cphotos.limit(2)%7Bimages%7D&format=json&method=get&pretty=0&suppress_http_code=1
+
+PARSED URL PARAMETERS:
+access_token=117286765480931|yifHszimouD4XXdfR9H0ydB4Rg0
+debug=all
+fields=name,count,photos.limit(2){images}
+format=json
+method=get
+pretty=0
+suppress_http_code=1
+
+RESPONSE:
+{
+   "name": "Test Album",
+   "count": 8,
+   "photos": {
+      "data": [
+         {
+            "images": [
+               {
+                  "height": 1000,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/17972269_1962865490611511_3588919925944864876_o.jpg?oh=febc6d0b38f75cf34f147a5b350ae6b9&oe=5979576C",
+                  "width": 1500
+               },
+               {
+                  "height": 960,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/p960x960/17972269_1962865490611511_3588919925944864876_o.jpg?oh=e19942e3e8850bba15faeef08097a7b5&oe=597D97B9",
+                  "width": 1440
+               },
+               {
+                  "height": 720,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/p720x720/17972269_1962865490611511_3588919925944864876_o.jpg?oh=e09ab0ac8ae6af2c345987e97b7b9994&oe=594E97A0",
+                  "width": 1080
+               },
+               {
+                  "height": 600,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-0/p600x600/17972269_1962865490611511_3588919925944864876_o.jpg?oh=17f77f93fe4400833e5089691dc8d5ca&oe=594DC84C",
+                  "width": 900
+               },
+               {
+                  "height": 480,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/17972269_1962865490611511_3588919925944864876_o.jpg?oh=da42653a1cc08d4eb8ce33ddc071c74c&oe=598AFE65",
+                  "width": 720
+               },
+               {
+                  "height": 320,
+                  "source": "https://scontent.xx.fbcdn.net/v/t1.0-0/q81/p320x320/17904409_1962865490611511_3588919925944864876_n.jpg?oh=e1a85674f4156d4770cf5ea83da73dbe&oe=594F4EF7",
+                  "width": 480
+               },
+               {
+                  "height": 540,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-0/q81/p180x540/17972269_1962865490611511_3588919925944864876_o.jpg?oh=5e3344b86f31b41b63537fb7e9229dc8&oe=597E6B6A",
+                  "width": 810
+               },
+               {
+                  "height": 130,
+                  "source": "https://scontent.xx.fbcdn.net/v/t1.0-0/q81/p130x130/17904409_1962865490611511_3588919925944864876_n.jpg?oh=604a689bd2c2f7169a6a0048607e78ea&oe=59941A10",
+                  "width": 195
+               },
+               {
+                  "height": 225,
+                  "source": "https://scontent.xx.fbcdn.net/v/t1.0-0/q81/p75x225/17904409_1962865490611511_3588919925944864876_n.jpg?oh=f1bc54ac96d58a80a3307252595efbe4&oe=5988D491",
+                  "width": 337
+               }
+            ],
+            "id": "1962865490611511"
+         },
+         {
+            "images": [
+               {
+                  "height": 750,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/17972107_1962865470611513_3081616645650838403_o.jpg?oh=78f3aa4995b3660a4acb6f2314929bac&oe=59912D0A",
+                  "width": 1125
+               },
+               {
+                  "height": 720,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/q81/p720x720/17972107_1962865470611513_3081616645650838403_o.jpg?oh=ceb26f9e815f1fbd4b6deb087452ea14&oe=595121B9",
+                  "width": 1080
+               },
+               {
+                  "height": 600,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-0/p600x600/17972107_1962865470611513_3081616645650838403_o.jpg?oh=e65e2343e4b0551b6d52386080fb2fa4&oe=59968B2A",
+                  "width": 900
+               },
+               {
+                  "height": 480,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/17972107_1962865470611513_3081616645650838403_o.jpg?oh=9d9ef44beeeb32a19cef214020716f5b&oe=5978D903",
+                  "width": 720
+               },
+               {
+                  "height": 320,
+                  "source": "https://scontent.xx.fbcdn.net/v/t1.0-0/p320x320/18010155_1962865470611513_3081616645650838403_n.jpg?oh=32f739e667ff3e193e3dd03bf8d1677c&oe=594C663C",
+                  "width": 480
+               },
+               {
+                  "height": 540,
+                  "source": "https://scontent.xx.fbcdn.net/v/t31.0-0/p180x540/17972107_1962865470611513_3081616645650838403_o.jpg?oh=4133d147a53237ae373800a09eb51b4c&oe=5993F70F",
+                  "width": 810
+               },
+               {
+                  "height": 130,
+                  "source": "https://scontent.xx.fbcdn.net/v/t1.0-0/p130x130/18010155_1962865470611513_3081616645650838403_n.jpg?oh=13de17a5d45cf85f4ffc701c666af521&oe=599ADADB",
+                  "width": 195
+               },
+               {
+                  "height": 225,
+                  "source": "https://scontent.xx.fbcdn.net/v/t1.0-0/p75x225/18010155_1962865470611513_3081616645650838403_n.jpg?oh=20d255bfaa6af4c9ac234275fb71aa74&oe=59803B6C",
+                  "width": 337
+               }
+            ],
+            "id": "1962865470611513"
+         }
+      ],
+      "paging": {
+         "cursors": {
+            "before": "MTk2Mjg2NTQ5MDYxMTUxMQZDZD",
+            "after": "MTk2Mjg2NTQ3MDYxMTUxMwZDZD"
+         },
+         "next": "https://graph.facebook.com/v2.9/1962865460611514/photos?access_token=117286765480931\u00257CyifHszimouD4XXdfR9H0ydB4Rg0&pretty=1&fields=images&limit=2&after=MTk2Mjg2NTQ3MDYxMTUxMwZDZD"
+      }
+   },
+   "id": "1962865460611514",
+   "__debug__": {
+      
+   }
+}

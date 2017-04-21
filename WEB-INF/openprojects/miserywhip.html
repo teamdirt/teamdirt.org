@@ -12,7 +12,8 @@
     <link rel="icon" href="favicon.png">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/global.js"></script>
+    <script type="text/javascript" src="/scripts/global.js"></script>
+    <script type="text/javascript" src="/scripts/openprojects.js"></script>
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -84,20 +85,11 @@ John Adams persuaded the committee to select Thomas Jefferson to compose the ori
 			</div>
 		</section>
 		
-		<section id="pictures" class="w3-panel">
+		<section id="pictures" ng-controller="PictureController as pictureController" ng-init="pictureController.pullFacebookPictureData('Mobile Uploads',4,250)" class="w3-panel">
 			<h4 class="subsection">Pictures</h4>
-			<div class="w3-row-padding">
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="onClick(this)" class="w3-hover-opacity album">
-				</div>
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="onClick(this)" class="w3-hover-opacity album">
-				</div>
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="onClick(this)" class="w3-hover-opacity album">
-				</div>
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="onClick(this)" class="w3-hover-opacity album">
+			<div ng-repeat="eachGroup in pictureController.getPictureGroupList()" class="w3-row-padding w3-padding">
+				<div ng-repeat="eachPic in eachGroup.groupArray" ng-class="pictureController.getw3Class()">
+					<img ng-src="{{eachPic.srcSmallPic}}" alt="image" ng-click="pictureController.setModalView($parent.$index, $index)" class="w3-hover-opacity album">
 				</div>
 			</div>
 			
