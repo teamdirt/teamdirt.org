@@ -10,6 +10,7 @@ img.album {
 	max-width: 250px;
     max-height: 300px;
     padding: 16px;
+    background: transparent url(/imgs/spinner.gif) no-repeat scroll center center;
     cursor:pointer;
 }
 

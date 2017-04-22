@@ -144,7 +144,9 @@ function PictureController($http) {
     
     // Set a modal image
     this.setModalView = function(parentIndex, index) {
-                
+        
+        // Clear the img, to load the spinner, then load with the big pic
+        document.getElementById("modalImg01").src = "";
         document.getElementById("modalImg01").src = picGroups[parentIndex].groupArray[index].srcBigPic;
         
         // Div ID is located in the footer.htm
