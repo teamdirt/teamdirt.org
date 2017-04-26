@@ -10,10 +10,10 @@ function HeroBanner() {
     this.images = [
 		{name:"", src:"/imgs/raw_imgs/equipment/eqp_2.JPG"},
 		{name:"", src:"/imgs/raw_imgs/equipment/eqp_1.png"},
-        {name:"A Cool Img", src:"/imgs/raw_imgs/bare_trail/bareTrail1.jpg"},
-		{name:"A Cool Img Too", src:"/imgs/raw_imgs/bare_trail/bareTrail2.jpg"},
-        {name:"Building", src:"/imgs/raw_imgs/building/building_1.jpg"},
-        {name:"An Event", src:"/imgs/raw_imgs/events/events_1.jpg"}
+        {name:"", src:"/imgs/raw_imgs/bare_trail/bareTrail1.jpg"},
+		{name:"", src:"/imgs/raw_imgs/bare_trail/bareTrail2.jpg"},
+        {name:"", src:"/imgs/raw_imgs/building/building_1.jpg"},
+        {name:"", src:"/imgs/raw_imgs/events/events_1.jpg"}
     ];
     
     this.getCurrentImg = function () {

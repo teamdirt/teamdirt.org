@@ -30,6 +30,10 @@ h4.subsection {
 	color: white;
 }
 
+img.albumBig {
+    background: transparent url(/imgs/spinner.gif) no-repeat scroll center center;
+}
+
 
 body {
 	font-family: Open Sans, Arial, Helvetica, sans-serif;
