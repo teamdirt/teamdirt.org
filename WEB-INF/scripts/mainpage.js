@@ -11,9 +11,7 @@ function HeroBanner() {
 		{name:"", src:"/imgs/raw_imgs/equipment/eqp_2.JPG"},
 		{name:"", src:"/imgs/raw_imgs/equipment/eqp_1.png"},
         {name:"", src:"/imgs/raw_imgs/bare_trail/bareTrail1.jpg"},
-		{name:"", src:"/imgs/raw_imgs/bare_trail/bareTrail2.jpg"},
-        {name:"", src:"/imgs/raw_imgs/building/building_1.jpg"},
-        {name:"", src:"/imgs/raw_imgs/events/events_1.jpg"}
+		{name:"", src:"/imgs/raw_imgs/bare_trail/bareTrail2.jpg"}
     ];
     
     this.getCurrentImg = function () {
