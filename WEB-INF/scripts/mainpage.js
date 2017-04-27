@@ -10,10 +10,10 @@ function HeroBanner() {
 	//convert bareTrail2.jpg -gravity center -crop 2000x480+0+0 bareTrail2.jpg
     this.images = [
 		{name:"", src:"/imgs/raw_imgs/banner/eqp_2.jpg"},
-		{name:"", src:"/imgs/raw_imgs/banner/building_3.jpg"},
+        {name:"", src:"/imgs/raw_imgs/banner/building_3.jpg"},
         {name:"", src:"/imgs/raw_imgs/banner/building_1.jpg"},
-		{name:"", src:"/imgs/raw_imgs/banner/eqp_1.png"},
-		{name:"", src:"/imgs/raw_imgs/banner/bareTrail1.jpg"}
+		{name:"", src:"/imgs/raw_imgs/banner/bareTrail1.jpg"},
+        {name:"", src:"/imgs/raw_imgs/banner/eqp_1.jpg"}
     ];
     
     this.getCurrentImg = function () {
@@ -64,7 +64,7 @@ function EventController($http) {
 	
 	var pullEventData = function() {
 		
-		console.log('Make call to: ' +  urlPage);
+		//console.log('Make call to: ' +  urlPage);
 		
 		// We first query facebook for all events on page /teamdirtIMBA
 		$http({
@@ -83,7 +83,8 @@ function EventController($http) {
 				var removeIndex = [];
 				for (var i = 0; i < listEvents.length; i++) {
 
-					var miliSecTime = Date.parse(listEvents[i].start_time);
+					//var miliSecTime = Date.parse(listEvents[i].start_time);
+                    var miliSecTime = moment(listEvents[i].start_time, moment.ISO_8601).valueOf();
 
 					if (miliSecTime < now) {
 						removeIndex.push(i);
@@ -97,21 +98,16 @@ function EventController($http) {
 			}
 
 			// Sort the events in order of start time
-			listEvents.sort(function(a,b){return Date.parse(a.start_time) - Date.parse(b.start_time)});
+			//listEvents.sort(function(a,b){return Date.parse(a.start_time) - Date.parse(b.start_time)});
+            listEvents.sort(function(a,b){return moment(a.start_time, moment.ISO_8601).valueOf() - moment(b.start_time, moment.ISO_8601).valueOf()});
 			
 			
 			// Format the dates and save
-			var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 			for (var i = 0; i < listEvents.length; i++) {
 				// Add pretty formatted event times
-				var startDate = new Date(listEvents[i].start_time);
-				var endDate = new Date(listEvents[i].end_time);
-				
-				var startDateString = days[startDate.getDay()] + ', ' + startDate.toLocaleString();
-				var endDateString = days[endDate.getDay()] + ', ' + endDate.toLocaleString();
-				
-				listEvents[i].startDateString = startDateString;
-				listEvents[i].endDateString = endDateString;
+   
+                listEvents[i].startDateString = moment(listEvents[i].start_time, moment.ISO_8601).format("dddd, MM/DD/YYYY hh:mm A");
+				listEvents[i].endDateString = moment(listEvents[i].end_time, moment.ISO_8601).format("dddd, MM/DD/YYYY hh:mm A");
 				
 				// Save the events
 				tdEvents.push(listEvents[i]);
@@ -166,7 +162,7 @@ function LatestNewsController($http) {
 	
 	var pullFeedData = function() {
 		
-		console.log('Make call to: ' +  urlPage);
+		//console.log('Make call to: ' +  urlPage);
 		
 		// We first query facebook for all events on page /teamdirtIMBA
 		$http({
@@ -186,8 +182,9 @@ function LatestNewsController($http) {
             }
 			
 			// Format the response date
-			var createdDate = new Date(feedItem.created_time);	
-			feedItem.created_time_string = createdDate.toLocaleString();
+			//var createdDate = new Date(feedItem.created_time);
+			//feedItem.created_time_string = createdDate.toLocaleString();
+            feedItem.created_time_string = moment(feedItem.created_time, moment.ISO_8601).format("MM/DD/YYYY hh:mm:ss A");
 				
 		  }, function errorCallback(response) {
 			// called asynchronously if an error occurs or server returns response with an error status.
