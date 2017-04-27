@@ -27,11 +27,14 @@ img.friends {
 	width:70px;
 }
 
+div.mainElement {
+	min-width:400px;
+}
+
 /* Events */
 div.event {
 	margin: 15px;
 	padding: 5px;
-	min-width: 200px;
 }
 img.event {
     max-width:100%;

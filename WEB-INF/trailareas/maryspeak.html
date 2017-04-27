@@ -24,15 +24,15 @@
 <body ng-app="tdApp">
     <header id="commonHeader" ng-include="'includes/navBar.htm'"></header>
     
-    <main id="mainContainer" ng-controller="RideArea as ridearea" class="w3-panel">
+    <main id="mainContainer" ng-controller="ScreenResolution as resolutionCtrl" ng-init="resolutionCtrl.calculateIFrameWidth()" class="w3-panel">
 		
 		<header id="mainHeader">
 			<h1>Mary's Peak Area</h1>
 		</header>
 
 		<section class="w3-panel">
-			<div class="TrailforksRegionInfo" data-w="1000px" data-h="130px" data-rid="8449" data-counts="1" data-stats="1"></div>
-			<div class="TrailforksWidgetMap" data-w="1000px" data-h="400px" data-rid="8449" data-maptype="trailforks" data-trailstyle="difficulty" data-controls="1" data-list="0" data-dml="1" data-layers="labels" data-z="" data-lat="" data-lon=""></div>
+			<div class="TrailforksRegionInfo iFrameElement" data-w="1000" data-h="130" data-rid="8449" data-counts="1" data-stats="1"></div>
+			<div class="TrailforksWidgetMap iFrameElement" data-w="1000" data-h="400" data-rid="8449" data-maptype="trailforks" data-trailstyle="difficulty" data-controls="1" data-list="0" data-dml="1" data-layers="labels" data-z="" data-lat="" data-lon=""></div>
 			<a href="https://www.trailforks.com/"><img src="/imgs/partners/trailforks_logo_pb.png" class="tfLogo"/></a>
 		</section>
 
@@ -59,7 +59,7 @@
 		<section class="w3-panel">
 			<h4 class="subsection">Trails</h4>
             <p>Please help out fellow riders, by submitting a trail report when you discover a trail hazard.  Also, general trail reports help too, since it keeps our records up to date.  You can submit a trail report by clicking on the trail in the table below, logging into trailforks (accounts are <i>free</i>), and creating a trail report.</p>
-			<div class="TrailforksTrailStatus" data-w="1000px" data-h="300px" data-rid="8449" data-displaytype="table" data-unsanctioned="0" data-photos="0"></div>
+			<div class="TrailforksTrailStatus iFrameElement" data-w="1000" data-h="200" data-rid="8449" data-displaytype="table" data-unsanctioned="0" data-photos="0"></div>
 		</section>
 
 		<section class="w3-panel">

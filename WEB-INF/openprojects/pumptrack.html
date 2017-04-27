@@ -76,7 +76,9 @@
                 <a href="https://www.indiegogo.com/projects/corvallis-pump-track/" target="_blank"><button class="w3-button w3-round-large w3-hover-green tdbutton">Contribute Here!</button></a>
                 <p>We are leading a $25,000 fundraising campaign to pay for the purchase and installation of the track in downtown Corvallis. Team Dirt has raised $10,000 so far and needs $25,000 more to purchase the entry level track.  The tracks are modular by design, so if we exceed our funding goal we can purchase a larger track.  We welcome and appreciate any amount you are able to contribute. </p>
                 <p>We are and have been working closely with Corvallis Parks and Recreation Department for several years to get us to this point. Timing of installation is dependent on how quickly funds are raised, the location is finalized and the vendor can ship us the track. With your support, we are confident that this wonderful amenity will come together!</p>
-                <iframe src="https://player.vimeo.com/video/152530557" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<div ng-controller="ScreenResolution as resolutionCtrl" ng-init="resolutionCtrl.calculateIFrameWidth()">
+                	<iframe class="iFrameElement" src="https://player.vimeo.com/video/152530557" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
             </div>
 		</section>
 		

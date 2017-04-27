@@ -24,7 +24,7 @@ function PictureController($http) {
         // Build URL, depending upon albumName
         var urlPage = 'https://graph.facebook.com/' + facebookParams.graphAPIVersion + '/' + albumIDReference[albumName] + '?access_token=' + facebookParams.teamDirtToken + '&fields=name%2Ccount%2Cphotos.limit(' + numPicturesToPull + ')%7Bimages%7D&format=json&method=get';
         
-		console.log('Make call to: ' +  urlPage);
+		//console.log('Make call to: ' +  urlPage);
 		
 		// Query Pictures from a set album
 		$http({

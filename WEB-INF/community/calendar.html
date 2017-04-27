@@ -32,8 +32,8 @@
 			<p>The following is a combined calendar of events for Team Dirt, Alsea Falls, and No-Secret build days.  Events will also typically be posted to Facebook a few days before, so members can mark their availability status.  Any event posted to Facebook that is canceled, will still show up on this site, but be marked as canceled.</p>
 		</section>
         
-		<section class="w3-panel w3-center">
-            <iframe src="https://calendar.google.com/calendar/embed?title=Team%20Dirt%20%28Build%20Days%20%2B%20Meetings%29&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=2629oa6e563eo6tv5d7kfbou98%40group.calendar.google.com&amp;color=%23060D5E&amp;src=66tun9etgti0oc5m0gb8prphc0%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		<section ng-controller="ScreenResolution as resolutionCtrl" ng-init="resolutionCtrl.calculateIFrameWidth()" class="w3-panel w3-center">
+            <iframe class="iFrameElement" src="https://calendar.google.com/calendar/embed?title=Team%20Dirt%20%28Build%20Days%20%2B%20Meetings%29&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=2629oa6e563eo6tv5d7kfbou98%40group.calendar.google.com&amp;color=%23060D5E&amp;src=66tun9etgti0oc5m0gb8prphc0%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 		</section>
         
         <footer></footer>

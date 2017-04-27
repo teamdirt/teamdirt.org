@@ -48,7 +48,7 @@
 			
 			<div id="contentContainer" class="w3-container w3-col s7">
 				
-                <div id="latestNews" ng-controller="LatestNewsController as newsController" ng-init="newsController.pullFacebookFeedData()" class="w3-container w3-margin-bottom">
+                <div id="latestNews" ng-controller="LatestNewsController as newsController" ng-init="newsController.pullFacebookFeedData()" class="w3-container w3-margin-bottom mainElement">
 					<h4 class="subsection">Latest News</h4>
 					<div ng-switch on="newsController.isFaceBookError()">
 						<div ng-switch-when="true" class="w3-card-4 w3-padding">
@@ -67,7 +67,7 @@
 					
 				</div>
 				
-				<div id="eventsContainer" ng-controller="EventController as eventController" ng-init="eventController.pullFacebookEventData()" class="w3-container">
+				<div id="eventsContainer" ng-controller="EventController as eventController" ng-init="eventController.pullFacebookEventData()" class="w3-container mainElement">
 					<h4 class="subsection">Upcoming Events</h4>
 
 					<!--button class="w3-button w3-blue" ng-click="eventController.testRequest()">Send Test Request</button-->
@@ -137,7 +137,7 @@
 
             </div>
 				
-			<div id="sponsorContainer" ng-include="'includes/sponsors.htm'" class="w3-container w3-col s5 w3-round-xlarge w3-card-4" style="min-width:400px;"></div>
+			<div id="sponsorContainer" ng-include="'includes/sponsors.htm'" class="w3-container w3-col s5 w3-round-xlarge w3-card-4 mainElement"></div>
                
         </section>
         
