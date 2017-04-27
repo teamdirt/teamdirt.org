@@ -7,11 +7,13 @@ function HeroBanner() {
 	// In the near future, this will be done with a Rest call to teamdirt.org
 	// We want the Hero to be 2000x402!
 	//convert -resize 2000x bareTrail2.jpg bareTrail2.jpg
+	//convert bareTrail2.jpg -gravity center -crop 2000x480+0+0 bareTrail2.jpg
     this.images = [
-		{name:"", src:"/imgs/raw_imgs/equipment/eqp_2.JPG"},
-		{name:"", src:"/imgs/raw_imgs/equipment/eqp_1.png"},
-        {name:"", src:"/imgs/raw_imgs/bare_trail/bareTrail1.jpg"},
-		{name:"", src:"/imgs/raw_imgs/bare_trail/bareTrail2.jpg"}
+		{name:"", src:"/imgs/raw_imgs/banner/eqp_2.jpg"},
+		{name:"", src:"/imgs/raw_imgs/banner/building_3.jpg"},
+        {name:"", src:"/imgs/raw_imgs/banner/building_1.jpg"},
+		{name:"", src:"/imgs/raw_imgs/banner/eqp_1.png"},
+		{name:"", src:"/imgs/raw_imgs/banner/bareTrail1.jpg"}
     ];
     
     this.getCurrentImg = function () {
