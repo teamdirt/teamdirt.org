@@ -28,7 +28,7 @@ function ScreenResolution() {
 		
 		if (currentWindowWidth <= 1080) {
 			// All of the elements should be less then 1000
-			var desiredWidth = currentWindowWidth - 100;
+			var desiredWidth = currentWindowWidth - 50;
 			
 			for (var i=0; i < iFrameElements.length; i++) {
 				
@@ -38,9 +38,23 @@ function ScreenResolution() {
 					
 					var pbClassList = iFrameElements[i].classList;
 					if (pbClassList.contains("TrailforksRegionInfo")) {
-						iFrameElements[i].setAttribute("data-h",parseInt(iFrameElements[i].getAttribute("data-h")) + 50);
+                        
+                        if (currentWindowWidth < 400) {
+                            iFrameElements[i].setAttribute("data-h",parseInt(iFrameElements[i].getAttribute("data-h")) + 80);
+                        } else if (currentWindowWidth >= 400 && currentWindowWidth < 800) {
+                            iFrameElements[i].setAttribute("data-h",parseInt(iFrameElements[i].getAttribute("data-h")) + 40);     
+                        }
+						
 					} else if (pbClassList.contains("TrailforksTrailStatus")) {
-						iFrameElements[i].setAttribute("data-h",parseInt(iFrameElements[i].getAttribute("data-h")) + 300);	   
+ 
+                        if (currentWindowWidth < 400) {
+                            // Don't show the comments for really small screens
+                            iFrameElements[i].setAttribute("data-displaytype","list");
+                        } else {
+                            // Expand the length of the table
+                            iFrameElements[i].setAttribute("data-h",parseInt(iFrameElements[i].getAttribute("data-h")) + 300);
+                        }
+                        
 					}
 				} else {
 					iFrameElements[i].setAttribute("width",desiredWidth);
