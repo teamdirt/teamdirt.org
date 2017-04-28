@@ -94,23 +94,13 @@
 			</div>
 		</section>
 		
-		<section id="pictures" class="w3-panel">
+		<section id="pictures" ng-controller="PictureController as pictureController" ng-init="pictureController.pullFacebookPictureData('Pump Track Build',4,250)" class="w3-panel">
 			<h4 class="subsection">Pictures</h4>
-			<div class="w3-row-padding">
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="modalImgView(this)" class="w3-hover-opacity album">
+			<div ng-repeat="eachGroup in pictureController.getPictureGroupList()" class="w3-row-padding w3-padding">
+				<div ng-repeat="eachPic in eachGroup.groupArray" ng-class="pictureController.getw3Class()">
+					<img ng-src="{{eachPic.srcSmallPic}}" alt="image" ng-click="pictureController.setModalView($parent.$index, $index)" class="w3-hover-opacity album">
 				</div>
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="modalImgView(this)" class="w3-hover-opacity album">
-				</div>
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="modalImgView(this)" class="w3-hover-opacity album">
-				</div>
-				<div class="w3-quarter">
-					<img src="imgs/placeholder.png" alt="image" onclick="modalImgView(this)" class="w3-hover-opacity album">
-				</div>
-			</div>
-			
+			</div>	
 		</section>
         
         <footer></footer>

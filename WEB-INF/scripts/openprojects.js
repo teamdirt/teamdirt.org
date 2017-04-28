@@ -5,6 +5,8 @@
 var albumIDReference = {
     'Test Album':'1962865460611514',
     'No Secret Build':'1455495437804995',
+    'Misery Whip Build':'1468914423129763',
+    'Pump Track Build':'1468935883127617',
     'Mobile Uploads':'856189104402301',
     'Timeline Photos':'784211154933430'
 }
