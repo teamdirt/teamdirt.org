@@ -77,21 +77,21 @@ function EventController($http) {
 			// parse the events
 			var listEvents = response.data.events.data;
 			
-			// Find all events that had a start date before now
+			// Find all events that had a end date before now
 			if (removePastEvents) {
 				var now = Date.now();
 				var removeIndex = [];
 				for (var i = 0; i < listEvents.length; i++) {
 
-					//var miliSecTime = Date.parse(listEvents[i].start_time);
-                    var miliSecTime = moment(listEvents[i].start_time, moment.ISO_8601).valueOf();
+					//var miliSecTime = Date.parse(listEvents[i].end_time);
+                    var miliSecTime = moment(listEvents[i].end_time, moment.ISO_8601).valueOf();
 
 					if (miliSecTime < now) {
 						removeIndex.push(i);
 					}
 				}
 
-				// Remove all events that had a start date before now
+				// Remove all events that had a end date before now
 				for (var i = removeIndex.length - 1; i >= 0; i--) {
 					listEvents.splice(removeIndex[i],1);
 				}
