@@ -3,14 +3,10 @@ img.traillead {
 	max-height: 150px;
 }
 
-img.meeting {
-	max-width: 100%;
-}
-
 div.traillead {
 	min-width: 100px;
 }
 
-div.meeting {
-	min-width: 100px;
+div.filelink {
+	min-width: 80px;
 }

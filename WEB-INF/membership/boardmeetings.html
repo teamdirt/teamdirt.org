@@ -13,6 +13,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script type="text/javascript" src="/scripts/global.js"></script>
+    <script type="text/javascript" src="/scripts/boardmeetings.js"></script>
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,49 +56,25 @@
 			</div>
 		</section>
         
-        <section class="w3-panel">
+        <section class="w3-panel" ng-controller="BoardMeetingController as boardMeetingController">
 			<h4 class="subsection">Meeting Minutes</h4>
-			<div class="w3-panel w3-padding-16 w3-border">
-				<div class="w3-row-padding">
-					<div class="w3-col s2 meeting">
-						<img src="imgs/placeholder.png" alt="trailLead" class="meeting">
+			<div ng-repeat="eachMeeting in boardMeetingController.getMeetingList()" class="w3-panel w3-padding-16 w3-border">
+				<div class="w3-row">
+					<div class="w3-col s1 filelink">
+                        <a ng-href="{{eachMeeting.url}}" target="_blank"><i class="fa fa-file-text-o w3-jumbo" aria-hidden="true"></i></a>
 					</div>
-					<div class="w3-col s10">
-                        <table class="w3-table w3-bordered">
-                            <tr>
-                              <td><b>Date</b></td>
-                              <td>12.04.2017</td>
-                            </tr>
-                            <tr>
-                                <td><b>Resolutions</b></td>
-                                <td><p>Finialized website design.</p>  
-                                    <p>Planned dates for the Alsea Trail Build events.</p>  
-                                    <p>Planned dates for the NoSecret trail build events.</p>
-                                </td>
-                            </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
-            <div class="w3-panel w3-padding-16 w3-border">
-				<div class="w3-row-padding">
-					<div class="w3-col s2 meeting">
-						<img src="imgs/placeholder.png" alt="trailLead" class="meeting">
-					</div>
-					<div class="w3-col s10">
-                        <table class="w3-table w3-bordered">
-                            <tr>
-                              <td><b>Date</b></td>
-                              <td>01.01.2017</td>
-                            </tr>
-                            <tr>
-                                <td><b>Resolutions</b></td>
-                                <td><p>Finialized website design.</p>  
-                                    <p>Planned dates for the Alsea Trail Build events.</p>  
-                                    <p>Planned dates for the NoSecret trail build events.</p>
-                                </td>
-                            </tr>
-                        </table>
+					<div class="w3-col s11">
+                        <p><b>{{eachMeeting.date}}</b></p>
+                        <div class="w3-row">
+                            <div class="w3-col s1">
+                              <p><b>Resolution Summary:</b></p> 
+                            </div>
+                            <div class="w3-col s11">
+                                <ul>
+                                  <li ng-repeat="eachResolution in eachMeeting.resolutions">{{eachResolution}}</li>
+                                </ul>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>
