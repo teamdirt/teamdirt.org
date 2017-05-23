@@ -32,7 +32,7 @@
 		<section class="w3-panel">
 			<h4 class="subsection">Description</h4>
 			<p>Team Dirt is a community organization ran by volunteers.  The group has a board of directors, which oversee finances, overall group direction, and help plan upcoming events.  From there, the area managers (McDonald Forest, Alsea Falls, etc.) will organize specific events and fundraisers.  Finally, trail leads are assigned to specific events.</p>
-            <p>Board meetings are often held at the local community Co-Op meeting halls.</p>
+            <p>Board meetings are often held at the local community Co-Op meeting halls on the second Wednesday of the month.  See the <a href="/community/calendar.html">calendar</a> for details.</p>
 		</section>
         
         <section class="w3-panel">
@@ -66,10 +66,10 @@
 					<div class="w3-col s11">
                         <p><b>{{eachMeeting.date}}</b></p>
                         <div class="w3-row">
-                            <div class="w3-col s1">
-                              <p><b>Resolution Summary:</b></p> 
+                            <div class="w3-col s2" style="min-width:80px;">
+                              <p><b>Discussion Summary:</b></p> 
                             </div>
-                            <div class="w3-col s11">
+                            <div class="w3-col s10">
                                 <ul>
                                   <li ng-repeat="eachResolution in eachMeeting.resolutions">{{eachResolution}}</li>
                                 </ul>

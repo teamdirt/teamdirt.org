@@ -137,8 +137,17 @@
 				</div>
 
             </div>
-				
-			<div id="sponsorContainer" ng-include="'includes/sponsors.htm'" class="w3-container w3-col m5 w3-round-xlarge w3-card-4 mainElement"></div>
+			
+            <div class="w3-col m5 mainElement">
+                <h4 class="subsection">Sponsors</h4>
+                <div id="sponsorContainer" ng-include="'includes/sponsors.htm'" class="w3-container w3-round-xlarge w3-card-4"></div>
+                <p>Individual donations may be made to Team Dirt, via PayPal!</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="w3-margin-top">
+                    <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image"><br>
+                    <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0">
+                </form>
+            </div>
+			
                
         </section>
         
