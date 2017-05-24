@@ -18,15 +18,16 @@ h4.subsection {
     font-weight: bold;
 }
 
-.tdbutton {
-    /*background-color: #72AE72;*/
-	background-color: black;
+button.tdbutton {
+	padding: 10px;
+	background-color: #46B414;
+	border: 1px solid #006600;
 	color: white;
 }
 
-.tdbutton:hover {
-    /*background-color: #4D924D;*/
-	background-color: #4D924D;
+button.tdbutton:hover {
+	background-color: #204A1A;
+	border-color: black;
 	color: white;
 }
 
