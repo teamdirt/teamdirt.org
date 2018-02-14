@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="250"
+   height="210"
+   viewBox="0 0 250 210"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="NorthRidgeAutomotive.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4180">
+      <stop
+         style="stop-color:#ff00ff;stop-opacity:1;"
+         offset="0"
+         id="stop4182" />
+      <stop
+         style="stop-color:#ff00ff;stop-opacity:0;"
+         offset="1"
+         id="stop4184" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4180"
+       id="linearGradient4186"
+       x1="7.247673"
+       y1="906.42877"
+       x2="237.21252"
+       y2="906.42877"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4180"
+       id="linearGradient4242"
+       x1="5.1351061"
+       y1="113.96277"
+       x2="241.40746"
+       y2="113.96277"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,18.43617)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.76"
+     inkscape:cx="133.44108"
+     inkscape:cy="126.57956"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1865"
+     inkscape:window-height="1056"
+     inkscape:window-x="55"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline"
+     transform="translate(0,-40)">
+    <ellipse
+       id="path3355"
+       cx="123.27128"
+       cy="132.39894"
+       rx="117.68617"
+       ry="73.537231"
+       style="opacity:1;fill:#800000;fill-opacity:1;stroke:url(#linearGradient4242);stroke-width:1.60000002;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+    <ellipse
+       id="path3355-1"
+       cx="116.62234"
+       cy="132.53192"
+       rx="111.98916"
+       ry="70.898735"
+       style="opacity:1;fill:#ffffff;stroke:none;stroke-width:0.9578355;stroke-opacity:0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3"
+     transform="translate(0,-40)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:29.7462616px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="16.822792"
+       y="237.07718"
+       id="text4269"
+       sodipodi:linespacing="125%"
+       transform="scale(1.010026,0.99007352)"><tspan
+         sodipodi:role="line"
+         id="tspan4271"
+         x="16.822792"
+         y="237.07718">541-929-7600</tspan></text>
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-842.36216)"
+     style="display:inline">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3336"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,802.36216)"><flowRegion
+         id="flowRegion3338"><rect
+           id="rect3340"
+           width="97.872337"
+           height="126.59574"
+           x="40.425533"
+           y="45.744682" /></flowRegion><flowPara
+         id="flowPara3342">Northridge Automotive</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:34.16244888px;line-height:89.99999762%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000080;fill-opacity:1;stroke:#ff00ff;stroke-width:0.85406119px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+       x="107.94413"
+       y="920.9281"
+       id="text3344"
+       sodipodi:linespacing="89.999998%"
+       transform="scale(1.015217,0.98501109)"><tspan
+         sodipodi:role="line"
+         id="tspan4174"
+         style="stroke:#ff00ff;stroke-width:0.85406119px;stroke-opacity:0"
+         x="107.94413"
+         y="920.9281">North</tspan><tspan
+         sodipodi:role="line"
+         id="tspan4176"
+         style="stroke:#ff00ff;stroke-width:0.85406119px;stroke-opacity:0"
+         x="107.94413"
+         y="951.67432">Ridge</tspan><tspan
+         sodipodi:role="line"
+         id="tspan4178"
+         style="stroke:#ff00ff;stroke-width:0.85406119px;stroke-opacity:0"
+         x="107.94413"
+         y="982.42053">Automotive</tspan></text>
+  </g>
+</svg>
