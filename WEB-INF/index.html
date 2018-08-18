@@ -100,7 +100,7 @@
 					<div ng-switch on="eventController.isNotEmptyEventList()">
 						<div ng-switch-when="false">
 							<p ng-if="eventController.isFaceBookError()">Please check the teamDirt Facebook events page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/events/" target="_blank">TeamDirtIMBA Events</a>.</p>
-							<p ng-if="!eventController.isFaceBookError()">Currently, no future events are published.</p>
+							<p ng-if="!eventController.isFaceBookError()">Please check the teamDirt Facebook events page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/events/" target="_blank">TeamDirtIMBA Events</a>.  We are no longer able to pull events data from facebook <a href="https://developers.facebook.com/docs/graph-api/reference/page/events/">reason</a>.</p>
 						</div>
 						<div ng-switch-when="true">
 							<div ng-repeat="eachEvent in eventController.getEventList()" class="w3-card-4 event">
