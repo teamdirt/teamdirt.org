@@ -50,120 +50,24 @@
 
         <section id="mainSection" class="w3-row-padding">
 			
-			<div id="contentContainer" class="w3-container w3-col m7">
+			<div id="contentContainer" class="w3-container w3-col m7 contentLeft">
 				
-                <div id="latestNews" ng-controller="LatestNewsController as newsController" ng-init="newsController.pullFacebookFeedData()" class="w3-container w3-margin-bottom mainElement">
-					<h4 class="subsection">Latest News</h4>
-					<div ng-switch on="newsController.isFaceBookError()">
-						<div ng-switch-when="true" class="w3-card-4 w3-padding">
-							<p>Please check the teamDirt Facebook page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/" target="_blank">TeamDirtIMBA</a>.
-						</div>
-						<div ng-switch-when="false" class="w3-card-4 w3-padding w3-row-padding">
-                            <a ng-href="{{newsController.getLatestFeedItem().link}}" target="_blank"><img ng-src="{{newsController.getLatestFeedItem().full_picture}}" alt="No Event Image" class="w3-col s4 pressImg"></a>
-							<div class="w3-col s8">
-								<h6><b>{{newsController.getLatestFeedItem().story}}</b></h6>
-								<p>Updated: {{newsController.getLatestFeedItem().created_time_string}}</p>
-								<p>{{newsController.getLatestFeedItem().message}}</p>
-                                <p ng-if="newsController.isSharedLink"><a ng-href="{{newsController.getLatestFeedItem().link}}" target="_blank">{{newsController.getLatestFeedItem().name}}</a><br>{{newsController.getLatestFeedItem().description}}</p>
-							</div>
-						</div>
-					</div>
-                    <!--
-					<div class="w3-card-4 w3-padding w3-row-padding" style="margin-top:20px;">
-                            <a ng-href="https://win.imba.com/digin?chapter=215201" target="_blank"><img src="/imgs/raw_imgs/building/building_6.jpg" class="w3-col s4 pressImg"/></a>
-							<div class="w3-col s8">
-                                <h6><b>IMBA - Team Dirt Selected for <i>Dig In!</i> Campaign</b></h6>
-								<p>Updated: 10/28/2017 9:00:00 PM</p>
-                                <p>Team Dirt recently applied for and was selected as a participant in IMBA's (International Mountain Biking Association) Dig In Grant campaign. Excitingly, we are the only mountain bike group in Oregon. This opportunity will help to raise funds for Phase II of the No Secret trail!</p>
-                                <p>This grant is similar to a crowdfunding campaign. IMBA has provided an online promotional platform for the next two months (until Dec. 31). IMBA will promote our next trail plan nationally and it is up to us to do the same thing locally. Team Dirt will be working hard to get the word out.</p>
-                                <p>Please Donate: <a href="https://win.imba.com/digin?chapter=215201" target="_blank">HERE</a>.</p>
-                                <p>Team Dirt and OSURF have been working in tandem to build the first mountain bike-specific trail in the research forest. “No Secret” is 1.6 miles long and is an intermediate-level trail. Team Dirt’s plan is to extend the No Secret trail and ultimately develop a sanctioned, dedicated trail system geared toward enrichment of the local mountain biking community.</p>
-							</div>
-				    </div>
-                    <div class="w3-card-4 w3-padding w3-row-padding" style="margin-top:20px;">
-                            <a ng-href="https://www.santacruzbicycles.com/en-US/oregon" target="_blank"><img src="https://www.santacruzbicycles.com/files/sc_oregon_trail-1500x2100.jpg?1504907222" class="w3-col s4 pressImg"/></a>
-							<div class="w3-col s8">
-								<h6><b>Team Dirt Selected for Santa Cruz's Oregon Trail Tax!</b></h6>
-								<p>Updated: 09/07/2017 11:00:00 AM</p>
-                                <p>Check out the article from <a href="http://www.bikemag.com/news/santa-cruz-matches-bike-tax/" target="_blank">BikeMag</a> for the full details and the press release from <a href="https://www.santacruzbicycles.com/en-US/oregon" target="_blank">Santa Cruz</a>.</p>
-                                <p>Any Santa Cruz or Juliana bike bought for the remainder of 2017, Santa Cruz will match the $15 bike tax and put that money into three different trail advocacy groups around the state – the Northwest Trail Alliance (NWTA), the Central Oregon Trail Alliance (COTA), and Team Dirt.</p>
-							</div>
-				    </div>
-					-->
-				</div>
-				
-				<div id="eventsContainer" ng-controller="EventController as eventController" ng-init="eventController.pullFacebookEventData()" class="w3-container mainElement">
+                <div id="latestNews" class="w3-container w3-margin-bottom mainElement">
+                    <h4 class="subsection">Latest News</h4>
+                    <div class="w3-card-4 w3-padding ng-scope">
+                        <p>Please check the teamDirt Facebook page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/" target="_blank">TeamDirtIMBA</a>.</p>
+                    </div>
+                </div>
+                
+
+                <div id="eventsContainer" class="w3-container mainElement">
 					<h4 class="subsection">Upcoming Events</h4>
-
-					<!--button class="w3-button w3-blue" ng-click="eventController.testRequest()">Send Test Request</button-->
-
-					<div ng-switch on="eventController.isNotEmptyEventList()">
-						<div ng-switch-when="false">
-							<p ng-if="eventController.isFaceBookError()">Please check the teamDirt Facebook events page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/events/" target="_blank">TeamDirtIMBA Events</a>.</p>
-							<p ng-if="!eventController.isFaceBookError()">Please check the teamDirt Facebook events page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/events/" target="_blank">TeamDirtIMBA Events</a>.  We are no longer able to pull events data from facebook <a href="https://developers.facebook.com/docs/graph-api/reference/page/events/">reason</a>.</p>
-						</div>
-						<div ng-switch-when="true">
-							<div ng-repeat="eachEvent in eventController.getEventList()" class="w3-card-4 event">
-								<div class="w3-display-container">
-									<img ng-src="{{eachEvent.cover.source}}" alt="eventImg" class="event">
-									<div class="w3-padding w3-display-topleft">
-										<div ng-switch on="eachEvent.is_canceled">
-											<h5 ng-switch-when="false" class="w3-round eventTitle">{{eachEvent.name}}</h5>
-											<h5 ng-switch-when="true" class="w3-round eventTitle" style="color:white;background-color:red;">Canceled: <span class="canceled">{{eachEvent.name}}</span></h5>
-										</div>
-										
-									</div>
-								</div>
-								<div class="w3-container">
-									<div class="w3-container">
-										<table class="w3-table">
-											<tr>
-												<td><b>Date/Time:</b></td>
-												<td ng-switch on="eachEvent.is_canceled">
-													<div ng-switch-when="false">{{eachEvent.startDateString}}<br>{{eachEvent.endDateString}}</div>
-													<div ng-switch-when="true">Canceled</div>
-												</td>	
-											</tr>
-											<tr>
-												<td><b>Location:</b></td>
-												<td ng-switch on="eachEvent.is_canceled">
-													<div ng-switch-when="false">{{eachEvent.place.name}}</div>
-													<div ng-switch-when="true">Canceled</div>
-												</td>
-											</tr>
-										</table>
-									</div>
-									<div class="w3-container">
-										<h6><b>Description:</b></h6>
-										<p>{{eachEvent.description}}</p>
-									</div>
-									<div class="w3-container w3-responsive">
-										<table class="w3-table-all w3-centered">
-											<tr>
-												<th>Going</th>
-												<th>Maybe</th>
-												<th>Interested</th>
-											</tr>
-											<tr>
-												<td>{{eachEvent.attending_count}}</td>
-												<td>{{eachEvent.maybe_count}}</td>
-												<td>{{eachEvent.interested_count}}</td>
-											</tr>
-										</table>
-									</div>
-									<div class="w3-container w3-margin">
-										<a ng-href="https://www.facebook.com/events/{{eachEvent.id}}/" target="_blank"><button class="w3-border w3-round-large w3-right tdbutton">More Info/RSVP&nbsp;&nbsp;<i class="fa fa-facebook-official w3-xlarge" style="vertical-align:middle;" aria-hidden="true"></i></button></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<p>Looking for future events, which have not yet been scheduled on Facebook?  Check out the Team Dirt <a href="/community/calendar.html">calendar</a>!</p>
-				</div>
+                    <iframe class="iFrameElement" src="https://calendar.google.com/calendar/embed?title=Team%20Dirt%20%28Build%20Days%20%2B%20Meetings%29&amp;showPrint=1&amp;height=800&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=2629oa6e563eo6tv5d7kfbou98%40group.calendar.google.com&amp;color=%23060D5E&amp;src=66tun9etgti0oc5m0gb8prphc0%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles&amp;showTitle=0&amp;showNav=0&amp;mode=AGENDA" style="border-width:0" width="500" height="800" frameborder="0" scrolling="no"></iframe>
+                </div>
 
             </div>
 			
-            <div class="w3-col m5 mainElement">
+            <div class="w3-col m5 contentRight">
                 <h4 class="subsection" style="margin-top:20px;">Individual Donations</h4>
                 <p>Financial donations are used to purchase essential tools, safety equipment, volunteer day food, and insurance.</p>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">

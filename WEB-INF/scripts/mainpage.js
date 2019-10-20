@@ -48,6 +48,7 @@ function HeroBanner() {
       
 }
 
+/*
 function EventController($http) {
 	
 	// Facebook Config
@@ -209,8 +210,11 @@ function LatestNewsController($http) {
     }
 	
 }
+*/
 
 // Add the Controllers
 tdApp.controller('HeroBanner', HeroBanner);
+/*
 tdApp.controller('EventController', EventController);
 tdApp.controller('LatestNewsController', LatestNewsController);
+*/

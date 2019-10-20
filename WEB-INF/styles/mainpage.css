@@ -31,6 +31,18 @@ img.friends {
 	max-height:70px;
 }
 
+div.contentLeft {
+	max-width:100%;
+	min-width:530px;
+	margin: auto;
+}
+
+div.contentRight {
+	max-width:100%;
+	min-width:300px;
+	margin: auto;
+}
+
 div.mainElement {
 	max-width:100%;
 	min-width:300px;
