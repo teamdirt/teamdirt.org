@@ -6,11 +6,11 @@ function HeroBanner() {
 	//convert -resize 2000x bareTrail2.jpg bareTrail2.jpg
 	//convert bareTrail2.jpg -gravity center -crop 2000x480+0+0 bareTrail2.jpg
     this.images = [
-		{name:"", src:"/imgs/raw_imgs/banner/eqp_2.jpg"},
-        {name:"", src:"/imgs/raw_imgs/banner/building_3.jpg"},
+		{name:"", src:"/imgs/raw_imgs/banner/alsea_shuttle.jpg"},
+        {name:"", src:"/imgs/raw_imgs/banner/finn.jpg"},
         {name:"", src:"/imgs/raw_imgs/banner/building_1.jpg"},
-		{name:"", src:"/imgs/raw_imgs/banner/bareTrail1.jpg"},
-        {name:"", src:"/imgs/raw_imgs/banner/eqp_1.jpg"}
+		{name:"", src:"/imgs/raw_imgs/banner/ttykwd.jpg"},
+        {name:"", src:"/imgs/raw_imgs/banner/alsea_shuttle2018.jpg"}
     ];
     
     this.getCurrentImg = function () {
