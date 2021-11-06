@@ -24,19 +24,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/styles/teamdirt.css">
 	<link rel="stylesheet" type="text/css" href="/styles/mainpage.css">
-<!--trying some stuff out below-->
-	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-	<style>
-	.mySlides {display:none;}
-	</style>
     
 </head>
 <body ng-app="tdApp">
     <header id="commonHeader" ng-include="'includes/navBar.htm'"></header>
-     
-<!--    <div ng-controller="HeroBanner as hero" class="w3-display-container heroBanner" ng-style="hero.getBackgroundImg()">-->
-        <!--img ng-src="{{hero.getCurrentImg()}}" alt="heroImage" style="width:100%;min-height:200px;max-height:400px;" leave this commented out-->
-<!--        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    
+    <div ng-controller="HeroBanner as hero" class="w3-display-container heroBanner" ng-style="hero.getBackgroundImg()">
+        <!--img ng-src="{{hero.getCurrentImg()}}" alt="heroImage" style="width:100%;min-height:200px;max-height:400px;"-->
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
             <span class="w3-center">
 				<h2 style="color:white">{{hero.getCurrentImgName()}}</h2>
                 <span ng-repeat="img in hero.images" ng-click="hero.set($index)" class="w3-badge w3-small w3-border w3-transparent {{hero.getColorCode($index)}}" style="cursor:pointer">&nbsp;</span>
@@ -44,76 +39,8 @@
 			<button ng-click="hero.shift(-1)" class="w3-button w3-round-large w3-left w3-black w3-hover-green">&#10094;</button>
             <button ng-click="hero.shift(1)" class="w3-button w3-round-large w3-right w3-black w3-hover-green">&#10095;</button>
         </div>
-    </div>-->
-
- 	<h2 class="w3-center"></h2>
-    <div class="w3-content w3-display-container" style="height:400px; width:960px; object-fit:cover;" >
-	<!-- <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%"> -->
-	<!-- <div class="w3-content w3-section" style="max-width:500px;min-height:200px;max-height:400px"> alsea_shuttle.jpg, alsea_work.jpg 20200307_105906 
-	style="margin:auto auto; margin-bottom:center"-->
-	  <img class="mySlides" src="/imgs/raw_imgs/banner/TD_logo.jpg" title="Team Dirt IMBA" style="height:100%; margin:auto auto;">  
-	  <img class="mySlides" src="/imgs/raw_imgs/banner/playtime_build.jpg" title="Play Time Build Day" style="height:100%; width:100%; object-fit:cover; display:block; margin-left:auto; margin-right:auto;">	  
-	  <img class="mySlides" src="/imgs/raw_imgs/banner/ttykwd.jpg" title="Take Your Kids to Work Day" style="height:100%; width:100%; object-fit:cover; display:block; margin-left:auto; margin-right:auto;">
-	  <img class="mySlides" src="/imgs/raw_imgs/banner/20170429_122025.jpg" style="height:100%; width:100%; object-fit:cover;" title="No Secret Build Day">
-	  <img class="mySlides" src="/imgs/raw_imgs/banner/finn.jpg" title="Youth Mountain Bike Camp" style="height:100%; width:100%; object-fit:cover;">  
-	  <img class="mySlides" src="/imgs/raw_imgs/banner/alsea_shuttle.jpg" title="Alsea Shuttle Days" style="height:100%; width:100%; object-fit:cover; display:block; margin-left:auto; margin-right:auto;">
-	  <img class="mySlides" src="/imgs/raw_imgs/banner/girls_playtime.jpg" title="Schooling Play Time" style="height:100%; width:100%; object-fit:cover; display:block; margin-left:auto; margin-right:auto; object-fit:cover;">
-	    <div class="w3-display-topright w3-container w3-padding-16 w3-black" id="mySlidesTag">
-		</div>
-	  <!-- 		<div class="w3-center w3-display-bottommiddle" style="max-width:500px">
-			<div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-			<div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-			<span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-			<span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-			<span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-		</div> -->
-		​​​​​<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-		<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
-
-	  </div>
-
-	<script>
-	var myIndex = 0;
-	carousel();
-
-	function carousel() {
-	  var i;
-	  var x = document.getElementsByClassName("mySlides");
-	  var y = document.getElementById("mySlidesTag");
-	  for (i = 0; i < x.length; i++) {
-		x[i].style.display = "none";
-			
-		//console.log(x[i].title);		
-		//console.log(y);
-	  }
-	  myIndex++;
-	  if (myIndex > x.length) {myIndex = 1}    
-	  x[myIndex-1].style.display = "block";  
-	  y.innerText = x[myIndex-1].title;
-	  setTimeout(carousel, 3000); // Change image every 2 seconds
-	}
-	</script>
-
-	<script>
-	var slideIndex = 1;
-	showDivs(slideIndex);
-
-	function plusDivs(n) {
-	  showDivs(slideIndex += n);
-	}
-
-	function showDivs(n) {
-	  var i;
-	  var x = document.getElementsByClassName("mySlides");
-	  if (n > x.length) {slideIndex = 1}
-	  if (n < 1) {slideIndex = x.length}
-	  for (i = 0; i < x.length; i++) {
-		 x[i].style.display = "none";  
-	  }
-	  x[slideIndex-1].style.display = "block";  
-	}
-	</script>
-
+    </div>
+         
 	<script>(function() { var d = document, fr = d.createElement('script'); fr.type = 'text/javascript'; fr.async = true; fr.src = 'https://static.fundrazr.com/widgets/loader.js'; var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fr, s);})();</script>
 	
 	
@@ -135,7 +62,7 @@
                     <h4 class="subsection">Latest News</h4>
                     <div class="w3-card-4 w3-padding ng-scope">
 <!-- 						<p>Team Dirt Needs Your Help. We launched our <a href="https://fundrazr.com/teamdirt2020" target="_blank">2020 Team Dirt Trails Booster campaign</a>. Please consider donating today! It ends Nov 30.</p>
-						<a href="https://fundrazr.com/teamdirt2020" title="2020 Team Dirt Trails Booster" target="_blank" class="w3-col s6"><img src="/imgs/fundrazr_1.jpg" alt="sponsor" class="silver" style="display:block"></a>
+						<a href="https://fundrazr.com/teamdirt2020" title="2020 Team Dirt Trails Booster" target="_blank" class="w3-col s6"><img src="/imgs/fundrazr_1.JPG" alt="sponsor" class="silver" style="display:block"></a>
 						<p></p>
 						<br>
 						<br>
@@ -143,12 +70,11 @@
 						<br>
 						<br>
 						<br>
-						<p>Check out our video for more info. Special thanks to Deann Garcia and her company <a href=" http://www.flammerougecreative.com/" target="_blank"> http://www.flammerougecreative.com/</a> for video production!</p>
-						<a href="https://youtu.be/6rDHXKrpShg" target="_blank"><img src="/imgs/fundrazr_message.jpg" alt="sponsor" class="silver" style="display:block"></a>
+						<p>Check out our video for more info. Special thanks to Deann Garcia and her company <a href=" http://www.flammerougecreative.com/" target="_blank"> http://www.flammerougecreative.com/</a> for the awesome video production!</p>
+						<a href="https://youtu.be/6rDHXKrpShg" target="_blank"><img src="/imgs/fundrazr_message.JPG" alt="sponsor" class="silver" style="display:block"></a>
 						<p></p>
 						<p></p> -->
-                        <p>Please check out the Team Dirt Facebook page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/" target="_blank">TeamDirtIMBA</a>.</p>
-                    </div>
+                        <p>Please check out the Team Dirt Facebook page at <a href="https://www.facebook.com/pg/TeamDirtIMBA/" target="_blank">TeamDirtIMBA</a>.</p>                    </div>
                 </div>
                 
 
